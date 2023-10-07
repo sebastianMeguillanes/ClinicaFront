@@ -1,0 +1,29 @@
+
+<h2>Lista de Pacientes</h2>
+
+<table>
+  <thead>
+    <tr>
+
+      <th>CI</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Acciones</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let paciente of pacientes">
+      <td>{{ paciente.documento_identidad }}</td>
+      <td>{{ paciente.nombre }}</td>
+      <td>{{ paciente.apellido }}</td>
+      <td>
+        <a [routerLink]="['/paciente/create']">Crear</a>
+        <a [routerLink]="['/paciente/edit', paciente.id]">Editar</a>
+        <a [routerLink]="['/paciente/details', paciente.id]">Detalles</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button [routerLink]="['/paciente/create']">Crear Nuevo Paciente</button>
