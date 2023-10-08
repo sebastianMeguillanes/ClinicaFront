@@ -6,6 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { DetailsComponent } from './details/details.component';
 import { ListComponent } from './list/list.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ListComponent } from './list/list.component';
     EditComponent,
     DetailsComponent,
     ListComponent,
+    DeleteComponent,
   ],
   imports: [
     CommonModule,
