@@ -1,1 +1,43 @@
-<p>create works!</p>
+<div class="container">
+  <h2>Crear Nuevo Paciente</h2>
+  <form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="pacienteData.nombre" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" [(ngModel)]="pacienteData.apellido" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="celular">Celular:</label>
+      <input type="text" id="celular" name="celular" [(ngModel)]="pacienteData.celular" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" [(ngModel)]="pacienteData.direccion" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="documento_identidad">Documento de Identidad:</label>
+      <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="pacienteData.documento_identidad" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo" [(ngModel)]="pacienteData.sexo" class="form-control" required>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+        <option value="O">Otro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+      <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="pacienteData.fecha_nacimiento" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="enfermedad_base">Enfermedad Base:</label>
+      <input type="text" id="enfermedad_base" name="enfermedad_base" [(ngModel)]="pacienteData.enfermedad_base" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+  </form>
+</div>

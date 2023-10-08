@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PacienteService {
-  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/paciente';
+  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/paciente/';
 
   constructor(private http: HttpClient) {}
 
@@ -14,7 +14,7 @@ export class PacienteService {
   }
 
   getPacienteById(id: number) {
-    return this.http.get(`${this.apiUrl}/${id}`);
+    return this.http.get(`${this.apiUrl}${id}`);
   }
 
   createPaciente(data: any) {
@@ -22,10 +22,10 @@ export class PacienteService {
   }
 
   updatePaciente(id: number, data: any) {
-    return this.http.put(`${this.apiUrl}/${id}`, data);
+    return this.http.put(`${this.apiUrl}:${id}`, data);
   }
 
   deletePaciente(id: number) {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+    return this.http.delete(`${this.apiUrl}${id}`);
   }
 }

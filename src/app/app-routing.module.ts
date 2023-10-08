@@ -8,14 +8,13 @@ const routes: Routes = [
         (m) => m.PacienteModule
       ),
   },
-  {
-    path: 'doctor',
-    loadChildren: () =>
-      import('./modules/doctor/doctor.module').then(
-        (m) => m.DoctorModule
-      ),
-  },
-  // Otras rutas de la aplicación
+  // {
+  //   path: 'doctor',
+  //   loadChildren: () =>
+  //     import('./modules/doctor/doctor.module').then(
+  //       (m) => m.DoctorModule
+  //     ),
+  // },
 ];
 
 @NgModule({

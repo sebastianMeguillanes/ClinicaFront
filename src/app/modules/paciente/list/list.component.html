@@ -1,29 +1,28 @@
+<div class="container">
+  <h2>Lista de Pacientes</h2>
 
-<h2>Lista de Pacientes</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>CI</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paciente of pacientes">
+        <td>{{ paciente.id_paciente }}</td>
+        <td>{{ paciente.nombre }}</td>
+        <td>{{ paciente.apellido }}</td>
+        <td>
+          <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
 
-<table>
-  <thead>
-    <tr>
+          <a [routerLink]="['/paciente/delete']" class="btn btn-danger">Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <th>CI</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Acciones</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let paciente of pacientes">
-      <td>{{ paciente.documento_identidad }}</td>
-      <td>{{ paciente.nombre }}</td>
-      <td>{{ paciente.apellido }}</td>
-      <td>
-        <a [routerLink]="['/paciente/create']">Crear</a>
-        <a [routerLink]="['/paciente/edit', paciente.id]">Editar</a>
-        <a [routerLink]="['/paciente/details', paciente.id]">Detalles</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<button [routerLink]="['/paciente/create']">Crear Nuevo Paciente</button>
+  <button [routerLink]="['/paciente/create']" class="btn btn-success">Crear Nuevo Paciente</button>
+</div>
