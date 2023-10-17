@@ -1,1 +1,28 @@
-<p>list works!</p>
+<div class="container">
+  <h2>Lista de Doctores</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>CI</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let doctor of doctores">
+        <td>{{ doctor.id_doctor }}</td>
+        <td>{{ doctor.nombre }}</td>
+        <td>{{ doctor.apellido }}</td>
+        <td>
+          <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
+
+          <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button [routerLink]="['/doctor/create']" class="btn btn-success">Crear Nuevo Doctor</button>
+</div>
