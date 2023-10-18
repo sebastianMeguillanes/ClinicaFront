@@ -1,1 +1,52 @@
-<p>edit works!</p>
+<div class="container">
+    <h2>Editar Doctor</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="doctorData.nombre" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" [(ngModel)]="doctorData.apellido" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="celular">Celular:</label>
+        <input type="text" id="celular" name="celular" [(ngModel)]="doctorData.celular" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" [(ngModel)]="doctorData.direccion" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="documento_identidad">Documento de Identidad:</label>
+        <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="doctorData.documento_identidad" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" [(ngModel)]="doctorData.sexo" class="form-control" required>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+          <option value="O">Otro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="doctorData.fecha_nacimiento" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" id="especialidad" name="especialidad" [(ngModel)]="doctorData.especialidad" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="universidad">Universidad:</label>
+        <input type="text" id="universidad" name="universidad" [(ngModel)]="doctorData.universidad" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="licencia_medica">Licencia medica:</label>
+        <input type="text" id="licencia_medica" name="licencia_medica" [(ngModel)]="doctorData.licencia_medica" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+    </form>
+  </div>
+  

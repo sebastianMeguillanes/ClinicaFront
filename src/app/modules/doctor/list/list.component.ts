@@ -9,15 +9,16 @@ import { DoctorService } from '../doctor.service';
 export class ListComponent implements OnInit {
   doctores: any[] = [];
 
-  constructor(private DoctorService: DoctorService) {}
+  constructor(private doctorService: DoctorService) {}
 
   ngOnInit() {
-    this.getOneDoctor();
+    this.getDoctor();
   }
 
-  getOneDoctor() {
-    this.DoctorService.getAllDoctores().subscribe((data: any) => {
+  getDoctor() {
+    this.doctorService.getAllDoctores().subscribe((data: any) => {
       this.doctores = data;
+      console.log(data);
     });
   }
 }

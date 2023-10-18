@@ -25,7 +25,7 @@ export class CreateComponent {
 
   onSubmit() {
     // Llamar al servicio para crear un paciente con this.pacienteData
-    this.DoctorService.createNewDoctor(this.doctorData).subscribe((response: any) => {
+    this.DoctorService.createDoctor(this.doctorData).subscribe((response: any) => {
       // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
       this.router.navigate(['/doctor/list']); // Redirigir a la lista de pacientes
     });

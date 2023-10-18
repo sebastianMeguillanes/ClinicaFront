@@ -13,20 +13,19 @@ export class DoctorService {
     return this.http.get(`${this.apiUrl}`);
   }
 
-  getOneDoctor(id: number) {
+  getDoctorById(id: number) {
     return this.http.get(`${this.apiUrl}${id}`);
   }
 
-  createNewDoctor(data: any) {
+  createDoctor(data: any) {
     return this.http.post(`${this.apiUrl}`, data);
   }
 
-  updateOneDoctor(id: number, data: any) {
+  updateDoctor(id: number, data: any) {
     return this.http.put(`${this.apiUrl}:${id}`, data);
   }
 
-  deleteOneDoctor(id: number) {
+  deleteDoctor(id: number) {
     return this.http.delete(`${this.apiUrl}${id}`);
   }
 }
-
