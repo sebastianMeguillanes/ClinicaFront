@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule si utilizas formularios de plantilla
 // o importa ReactiveFormsModule si utilizas formularios reactivos
@@ -19,8 +19,6 @@ import { FormsModule } from '@angular/forms'; // Importa FormsModule si utilizas
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ModalModule.forRoot(),
-    RouterModule.forRoot([]),
     FormsModule,
   ],
   providers: [],
