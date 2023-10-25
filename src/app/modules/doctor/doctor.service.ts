@@ -22,7 +22,7 @@ export class DoctorService {
   }
 
   updateDoctor(id: number, data: any) {
-    return this.http.put(`${this.apiUrl}:${id}`, data);
+    return this.http.put(`${this.apiUrl}${id}`, data);
   }
 
   deleteDoctor(id: number) {
