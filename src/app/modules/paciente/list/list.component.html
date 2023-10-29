@@ -6,6 +6,8 @@
         <th>CI</th>
         <th>Nombre</th>
         <th>Apellido</th>
+        <th>naciemiento</th>
+
         <th>Acciones</th>
       </tr>
     </thead>
@@ -14,6 +16,7 @@
         <td>{{ paciente.documento_identidad }}</td>
         <td>{{ paciente.nombre }}</td>
         <td>{{ paciente.apellido }}</td>
+        <td>{{ paciente.fecha_nacimiento }}</td>
         <td>
           <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
 

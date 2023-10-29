@@ -5,7 +5,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class PacienteService {
-  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/paciente/';
+ private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/paciente/';
+
+ // private apiUrl = 'http://localhost:2000/api/v1/paciente/';
+
 
   constructor(private http: HttpClient) {}
 
