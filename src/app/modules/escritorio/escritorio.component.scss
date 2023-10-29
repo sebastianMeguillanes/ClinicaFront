@@ -1,0 +1,42 @@
+.escritorio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: flex-end; /* Alinea los botones a la derecha */
+      gap: 10px;
+  
+      .doctor-button,
+      .paciente-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+  
+      .doctor-button {
+        background-color: #28a745;
+      }
+  
+      .paciente-button {
+        background-color: #dc3545;
+      }
+    }
+  }
+  
