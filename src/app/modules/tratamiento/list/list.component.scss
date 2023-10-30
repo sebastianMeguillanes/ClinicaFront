@@ -1,0 +1,66 @@
+.container {
+    margin: 20px;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 10px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #007BFF; /* Cambia este color al celeste que desees */
+        color: white;
+      }
+  
+      tr {
+        &:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+  
+        &:hover {
+          background-color: #d9edf7;
+        }
+      }
+    }
+  
+    .btn {
+      margin-right: 10px;
+    }
+  
+    .btn-primary {
+      background-color: #007BFF; /* Cambia este color al celeste que desees */
+      color: white;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  
+    .btn-danger {
+      background-color: #DC3545;
+      color: white;
+  
+      &:hover {
+        background-color: #a63038;
+      }
+    }
+  
+    .btn-success {
+      background-color: #007BFF;
+      color: white;
+  
+      &:hover {
+        background-color: #007BFF;
+      }
+    }
+  }
+  
+    

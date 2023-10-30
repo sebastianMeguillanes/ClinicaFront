@@ -16,4 +16,7 @@ export class EscritorioComponent {
   irAPacienteList() {
     this.router.navigate(['/paciente/list']); // Redirigir a la página de Pacientes
   }
+  irATratamientoList() {
+    this.router.navigate(['/tratamiento/list']); // Redirigir a la página de Tratamientos
+  }
 }

@@ -1,6 +1,6 @@
-/*import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PacienteService } from '../histClinica.service';
+import { HistClinicaService } from '../histClinica.service';
 
 @Component({
   selector: 'app-create',
@@ -19,11 +19,11 @@ export class CreateComponent {
     enfermedad_base: '',
   };
 
-  constructor(private pacienteService: PacienteService, private router: Router) {}
+  constructor(private histClinicaService: HistClinicaService, private router: Router) {}
 
   onSubmit() {
-    // Llamar al servicio para crear un paciente con this.pacienteData
-    this.pacienteService.createPaciente(this.pacienteData).subscribe((response: any) => {
+    // Llamar al servicio para crear un historial clinico con this.pacienteData
+    this.histClinicaService.createPaciente(this.histClinicaData).subscribe((response: any) => {
       // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
       this.router.navigate(['/paciente/list']); // Redirigir a la lista de pacientes
     });
@@ -34,4 +34,3 @@ export class CreateComponent {
   }
 }
 
-*/

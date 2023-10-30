@@ -22,7 +22,14 @@ const routes: Routes = [
       import('./modules/escritorio/escritorio.module').then(
         (m) => m.EscritorioModule
       ),
-  }
+  },
+  {
+  path: 'tratamiento',
+    loadChildren: () =>
+      import('./modules/tratamiento/tratamiento.module').then(
+        (m) => m.TratamientoModule
+      ),
+  },
 ];
 
 @NgModule({
