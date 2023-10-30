@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { HistClinicaService } from '../histClinica.service';
 
 @Component({
-  selector: 'app-create',
+  selector: 'app-creates',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
 })
