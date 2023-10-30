@@ -7,7 +7,7 @@ import { HistClinicaService } from '../histClinica.service';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  histClinica: any[] = [
+  histClinicas: any[] = [
   ];
 
   constructor(private histClinicaService: HistClinicaService) {}
@@ -18,9 +18,7 @@ export class ListComponent implements OnInit {
 
   getHistClinica() {
     this.histClinicaService.getAllHistClinica().subscribe((data: any) => {
-      this.histClinica = data;
+      this.histClinicas = data;
     });
   }
-    };
-  
-
+  }

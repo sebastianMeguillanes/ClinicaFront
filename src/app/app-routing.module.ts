@@ -34,7 +34,7 @@ const routes: Routes = [
     path: 'histClinica',
       loadChildren: () =>
         import('./modules/histClinica/histClinica.module').then(
-          (m) => m.histClinicaModule
+          (m) => m.HistClinicaModule
         ),
     }
 ];

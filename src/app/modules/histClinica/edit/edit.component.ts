@@ -9,15 +9,7 @@ import { HistClinicaService } from '../histClinica.service';
 })
 export class EditComponent implements OnInit {
   histClinicaData: any = {
-    nombre: '',
-    apellido: '',
-    celular: '',
-    direccion: '',
-    documento_identidad: '',
-    sexo: 'M',
-    id_persona: '',
-    fecha_nacimiento: '',
-    enfermedad_base: '',
+    radiografias: ''
   };
 
   constructor(

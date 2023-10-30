@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Historial Clinico</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Radiografias</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let histClinica of histClinicas">
+          <td>{{ histClinica.radiografias }}</td>
+          <td>
+            <a [routerLink]="['/histClinica/edit', histClinica.id_histClinica]" class="btn btn-primary">Detalles</a>
+  
+            <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
+  
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button [routerLink]="['/histClinica/create']" class="btn btn-success">Crear Nuevo Historial Clinico</button>
+  </div>
+  

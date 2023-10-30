@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Crear Nuevo Historial Clinico</h2>
+    <form (submit)="onSubmit()">
+      
+      <div class="form-group">
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" [(ngModel)]="histClinicaData.radiografias" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+    </form>
+  </div>
+  

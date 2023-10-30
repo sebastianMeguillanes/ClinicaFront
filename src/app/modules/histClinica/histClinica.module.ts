@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     CreateComponent,
     EditComponent,
-    ListComponent
-  ],
+    ListComponent,
+   ],
   imports: [CommonModule, HistClinicaRoutingModule, FormsModule],
 })
-export class PacienteModule {}
+export class HistClinicaModule {}
 
