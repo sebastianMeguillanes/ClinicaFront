@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 export class TratamientoService {
  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/tratamiento/';
 
-
   constructor(private http: HttpClient) {}
 
   getAllTratamientos() {
