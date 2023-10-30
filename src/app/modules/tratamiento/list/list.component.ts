@@ -18,9 +18,7 @@ export class ListComponent implements OnInit {
 
   getTratamientos() {
     this.tratamientoService.getAllTratamientos().subscribe((data: any) => {
-      this.tratamientos = data.map((tratamiento:{  }) => {
-        return tratamiento;
-      });
+      this.tratamientos = data;
     });
   }
-}
+  }
