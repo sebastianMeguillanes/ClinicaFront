@@ -31,9 +31,14 @@
             ],
             "styles": [
               "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/style.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/app/modules/paciente/list/list.component.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
