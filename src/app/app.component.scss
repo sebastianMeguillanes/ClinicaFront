@@ -1,18 +1,16 @@
-/* Estilos para el contenedor principal de la página */
-.content-container {
+.wrapper {
   display: flex;
-  flex-direction: column; /* Aplicar un diseño de columna */
-  align-items: stretch; /* Alinear elementos estirados horizontalmente */
-  height: 100vh; /* Establecer altura al 100% de la ventana */
-  overflow: hidden; /* Ocultar desbordamiento del contenido */
-
-  /* Puedes agregar otros estilos según tus necesidades */
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Estilos para el contenido dentro del contenedor principal */
-.router-outlet {
-  flex: 1; /* Permite que el contenido se expanda para llenar el espacio disponible */
-  overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es más largo que la ventana */
-
-  /* Puedes agregar otros estilos según tus necesidades */
+.content {
+  margin-top: 50px; /* Margen superior predefinido */
+  margin-left: 400px; /* Margen izquierdo predefinido */
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start; /* Alineación izquierda */
+  align-items: flex-start; /* Alineación arriba */
+  overflow: auto; /* Controla el desbordamiento */
 }
