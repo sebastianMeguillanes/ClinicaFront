@@ -1,13 +1,28 @@
 <div class="container">
-    <h2>Nuevo Historial Clinico</h2>
-    <form (submit)="onSubmit()">
-      
-      <div class="form-group">
-        <label for="tipo">Radiografia:</label>
-        <input type="text" id="tipo" name="tipo" [(ngModel)]="histClinicaData.radiografias" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Guardar</button>
-      <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
-    </form>
-  </div>
+  <h2>Nuevo Historial Clínico</h2>
+  <form (submit)="onSubmit()">
   
+    <div class="form-group">
+      <label for="radiografias">Radiografias:</label>
+      <input type="image" id="radiografias" name="radiografias" [(ngModel)]="histClinicaData.radiografias" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="tipo_tratamiento">Tipo de Tratamiento:</label>
+      <input type="text" id="tipo_tratamiento" name="tipo_tratamiento" [(ngModel)]="histClinicaData.tipo_tratamiento" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="nombre_doctor">Nombre del Doctor:</label>
+      <input type="text" id="nombre_doctor" name="nombre_doctor" [(ngModel)]="histClinicaData.nombre_doctor" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido_doctor">Tipo de Tratamiento:</label>
+      <input type="text" id="apellido_doctor" name="apellido_doctor" [(ngModel)]="histClinicaData.apellido_doctor" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="fecha_registro">Fecha de Registro:</label>
+      <input type="date" id="fecha_registro" name="fecha_registro" [(ngModel)]="histClinicaData.fecha_registro" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+  </form>
+</div>

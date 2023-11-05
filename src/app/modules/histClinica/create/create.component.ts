@@ -8,8 +8,22 @@ import { HistClinicaService } from '../histClinica.service';
   styleUrls: ['./create.component.scss'],
 })
 export class CreateComponent {
+  isValidURL(url: string): boolean {
+    const pattern = new RegExp('^(https?:\\/\\/)?'+ // Protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // Domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR IPv4
+      '(\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // Port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // Query string
+      '(#[-a-z\\d_]*)?$', 'i'); // Fragment locator
+
+    return !!pattern.test(url);
+  }
   histClinicaData: any = {
-    radiografias: ''
+    radiografias: '',
+    tipo_tratamiento: '',
+    nombre_doctor: '',
+    apellido_doctor: '',
+    fecha_registro: ''
   };
 
   constructor(private histClinicaService: HistClinicaService, private router: Router) {}
@@ -23,7 +37,8 @@ export class CreateComponent {
   }
 
   goBack() {
-    this.router.navigate(['/histClinica/list']); // Volver atrás sin guardar cambios
+    // Navegar a la página anterior en el historial del navegador
+    window.history.back();
   }
 }
 
