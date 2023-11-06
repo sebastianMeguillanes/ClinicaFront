@@ -14,7 +14,8 @@ export class EditComponent implements OnInit {
     celular: '',
     direccion: '',
     documento_identidad: '',
-    sexo: 'M', // Valor predeterminado
+    sexo: 'M',
+    id_persona: '',
     fecha_nacimiento: '',
     especialidad: '',
     universidad:'',
@@ -29,11 +30,11 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     const doctorId =this.route.snapshot.params['id'];
-    console.log(doctorId);
 
-    console.log(this.doctorData);
+
     this.doctorService.getDoctorById(doctorId).subscribe((response: any) => {
       this.doctorData = response;
+      this.doctorData.fecha_nacimiento = new Date(this.doctorData.fecha_nacimiento).toISOString().split('T')[0];
     });
   }
 

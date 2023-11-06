@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { EditRoutingModule } from './edit-routing.module';
+import { ImageRoutingModule } from './image-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    EditRoutingModule
+    ImageRoutingModule
   ]
 })
-export class EditModule { }
+export class ImageModule { }
