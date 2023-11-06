@@ -30,13 +30,6 @@ const routes: Routes = [
         (m) => m.TratamientoModule
       ),
   },
-  {
-    path: 'histClinica',
-      loadChildren: () =>
-        import('./modules/histClinica/histClinica.module').then(
-          (m) => m.HistClinicaModule
-        ),
-    }
 ];
 
 @NgModule({
