@@ -20,10 +20,12 @@ export class CreateComponent {
   }
   histClinicaData: any = {
     radiografias: '',
-    tipo_tratamiento: '',
-    nombre_doctor: '',
-    apellido_doctor: '',
-    fecha_registro: ''
+    tipo: '',
+    id_doctor: '',
+    id_paciente: '',
+    fecha_registro: '',
+    medicaciones: '',
+    examen_clinico: ''
   };
 
   constructor(private histClinicaService: HistClinicaService, private router: Router) {}

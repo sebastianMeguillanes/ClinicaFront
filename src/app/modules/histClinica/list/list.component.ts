@@ -27,6 +27,8 @@ getHistClinica() {
     });
   });
 }
+
+
 }
 
   /*ngOnInit() {
