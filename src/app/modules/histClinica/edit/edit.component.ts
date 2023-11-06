@@ -30,7 +30,7 @@ export class EditComponent implements OnInit {
       this.histClinicaData.fecha_registro = new Date(this.histClinicaData.fecha_registro);
     });
   }
-  
+  //a
   onSubmit() {
     const histClinicaId = this.route.snapshot.params['id'];
     this.histClinicaData.fecha_registro = new Date(this.histClinicaData.fecha_registro);

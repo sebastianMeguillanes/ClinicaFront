@@ -12,7 +12,7 @@ export class ImageComponent implements OnInit {
 
 ngOnInit(): void {
     const histClinicaId = this.route.snapshot.paramMap.get('id');
-    this.histClinicaService.getRadiografia(histClinicaId).subscribe((url: string) => {
+    this.histClinicaService.getImage(histClinicaId).subscribe((url: string) => {
         this.radiografiaUrl = url;
 }
 
