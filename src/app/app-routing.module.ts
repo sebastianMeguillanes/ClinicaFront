@@ -29,7 +29,7 @@ const routes: Routes = [
       import('./modules/tratamiento/tratamiento.module').then(
         (m) => m.TratamientoModule
       ),
-  },
+  }
 ];
 
 @NgModule({
