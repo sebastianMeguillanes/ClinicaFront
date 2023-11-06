@@ -6,8 +6,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DoctorService {
   private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/doctor/';
-  //private apiUrl = 'http://localhost:2000/api/v1/doctor/';
-
 
   constructor(private http: HttpClient) {}
 
