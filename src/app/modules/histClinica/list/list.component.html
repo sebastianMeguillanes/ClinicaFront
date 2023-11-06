@@ -3,7 +3,6 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Radiografías</th>
         <th>Tipo de Tratamiento</th>
         <th>Nombre del Doctor</th>
         <th>Apellido del Doctor</th>
@@ -13,9 +12,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let histClinica of histClinicas">
-        <td>
-          <img [src]="histClinica.radiografias" alt="Radiografia" style="max-width: 100px; max-height: 100px;">
-        </td>
           <td>{{ histClinica.tipo_tratamiento }}</td>
           <td>{{ histClinica.nombre_doctor }}</td>
           <td>{{ histClinica.apellido_doctor }}</td>
@@ -23,6 +19,7 @@
         <td>
           <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
           <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
+          <a [routerLink]="['/histClinica/image']" class="btn btn-primary">Radiografia</a>
         </td>
       </tr>
     </tbody>

@@ -31,24 +31,9 @@ export class HistClinicaService {
     return this.http.delete(`${this.apiUrl}${id}`);
   }
 
-  /*
-  crearFoto(radiografia: File){
-    const fd = new FormData();
-    fd.append('image', radiografia);
-    return this.http.post(`${this.apiUrl}`, fd);
+  getImage(id: number) {
+    return this.http.get(`${this.apiUrl}${id}`);
   }
-
-  /*cargarFoto(id: string){
-    return this.http.get<radiografia>(`${this.apiUrl}${id}`);
-  }
-
-  cargarFotos(){
-    return this.http.get<radiografia[]>(`${this.apiUrl}`);
-  }
-  /*editarFoto(id: string){
-    return this.http.put(`${this.apiUrl}/${id}`, {title, description});
-  }
-  */
 
   getHistClinicaByPacienteId(pacienteId: number) {
     return this.http.get(`${this.apiUrl}/histClinica/list?pacienteId=${pacienteId}`);
