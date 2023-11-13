@@ -31,23 +31,3 @@ getHistClinica() {
 
 }
 
-  /*ngOnInit() {
-    const pacienteId = this.route.snapshot.params['id'];
-    this.route.paramMap.subscribe((params) => {
-      this.pacienteId = +this.params.get('id'); // Convierte a número el ID del paciente
-      this.getHistClinicaByPacienteId();
-    
-
-    this.histClinicaService.getHistClinicaById(pacienteId).subscribe((response: any) => {
-      this.pacienteData = response;
-  });
-  }
-
-  getHistClinicaByPacienteId() {
-  const pacienteId = this.route.snapshot.params['id'];
-  this.histClinicaService.getHistClinicaByPacienteId(pacienteId).subscribe((data: any) => {
-    this.histClinicas = data;
-    });
-  }
-  */
-

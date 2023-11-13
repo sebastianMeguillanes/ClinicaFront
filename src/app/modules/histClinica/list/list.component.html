@@ -9,7 +9,7 @@
         <th>Apellido Doctor</th>
         <th>Fecha de Registro</th>
         <th>Medicaciones</th>
-        <th>Examen Clínico</th>
+        <th>Estado de Historial Clinica</th>
         <th>Acciones</th>
       </tr>
     </thead>
@@ -20,10 +20,10 @@
           <td>{{ histClinica.nombre_doctor }}</td>
           <td>{{ histClinica.apellido_doctor }}</td>
           <td>{{ histClinica.fecha_registro }}</td>
-          <td>{{ histClinica.medicaciones }}</td>
-          <td>{{ histClinica.examen_clinico }}</td>
+          <td>{{ histClinica.medicaciones}}</td>
+          <td>{{ histClinica.estado_historial }}</td>
         <td>
-          <!-- <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a> -->
+          <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
           <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
           <a [href]="'https://clinicaback.dev.404.codes/api/v1/histClinica/radiografia/' + histClinica.radiografias" class="btn btn-primary">Radiografia</a>
         </td>

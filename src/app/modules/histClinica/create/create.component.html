@@ -3,34 +3,47 @@
   <form (submit)="onSubmit()">
   
     <div class="form-group">
-      <label for="radiografias">Radiografias:</label>
-      <input type="text" id="radiografias" name="radiografias" [(ngModel)]="histClinicaData.radiografias" class="form-control">
+      <label for="id_paciente">Paciente:</label>
+      <input type="text" id="id_paciente" name="id_paciente" [(ngModel)]="histClinicaData.id_paciente" class="form-control" required>
     </div>
-    <div class="form-group">
-      <label for="tipo">Tratamiento:</label>
-      <input type="text" id="tipo" name="tipo" [(ngModel)]="histClinicaData.tipo" class="form-control" required>
-    </div>
+
     <div class="form-group">
       <label for="id_doctor">Doctor:</label>
       <input type="text" id="id_doctor" name="id_doctor" [(ngModel)]="histClinicaData.id_doctor" class="form-control" required>
     </div>
-    <div class="form-group">
-      <label for="id_paciente">Paciente:</label>
-      <input type="text" id="id_paciente" name="id_paciente" [(ngModel)]="histClinicaData.id_paciente" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="fecha_registro">Fecha de Registro:</label>
-      <input type="date" id="fecha_registro" name="fecha_registro" [(ngModel)]="histClinicaData.fecha_registro" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="medicaciones">Medicaciones:</label>
-      <input type="text" id="medicaciones" name="medicaciones" [(ngModel)]="histClinicaData.medicaciones" class="form-control" required>
-    </div>
+
     <div class="form-group">
       <label for="examen_clinico">Examen Clínico:</label>
       <input type="text" id="examen_clinico" name="examen_clinico" [(ngModel)]="histClinicaData.examen_clinico" class="form-control" required>
     </div>
+    
+    <div class="form-group">
+      <label for="id_tratamiento">Tratamiento:</label>
+      <input type="text" id="id_tratamiento" name="id_tratamiento" [(ngModel)]="histClinicaData.id_tratamiento" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="medicaciones">Medicaciones:</label>
+      <input type="text" id="medicaciones" name="medicaciones" [(ngModel)]="histClinicaData.medicaciones" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fecha_registro">Fecha de Registro:</label>
+      <input type="date" id="fecha_registro" name="fecha_registro" [(ngModel)]="histClinicaData.fecha_registro" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="radiografias">Radiografias:</label>
+      <input type="text" id="radiografias" name="radiografias" [(ngModel)]="histClinicaData.radiografias"class="form-control">
+    </div>
+
+       <div class="form-group">
+      <label for="estado_historial">Estado Historial:</label>
+      <input type="text" id="estado_historial" name="estado_historial" [(ngModel)]="histClinicaData.estado_historial" class="form-control" required>
+    </div>
+  
     <button type="submit" class="btn btn-primary">Guardar</button>
     <button type="button" class="btn btn-secondary" (click)="goBack()">Volver Atrás</button>
+
   </form>
 </div>

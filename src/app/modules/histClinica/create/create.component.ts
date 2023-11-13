@@ -38,6 +38,7 @@ export class CreateComponent {
     });
   }
 
+
   goBack() {
     // Navegar a la página anterior en el historial del navegador
     window.history.back();

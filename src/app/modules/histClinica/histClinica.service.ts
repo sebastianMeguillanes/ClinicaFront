@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HistClinicaService {
  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/histClinica/';
-
+ //private apiUrl2 = 'https://clinicaback.dev.404.codes/api/v1/histClinica/historias';
  // private apiUrl = 'http://localhost:2000/api/v1/paciente/';
 
 
@@ -18,6 +18,10 @@ export class HistClinicaService {
   getHistClinicaById(id: number) {
     return this.http.get(`${this.apiUrl}${id}`);
   }
+
+  // getHistClinicaById2(id: number) {
+  //   return this.http.get(`${this.apiUrl2}${id}`);
+  // }
 
   createHistClinica(data: any) {
     return this.http.post(`${this.apiUrl}`, data);
@@ -38,4 +42,6 @@ export class HistClinicaService {
   getHistClinicaByPacienteId(pacienteId: number) {
     return this.http.get(`${this.apiUrl}/histClinica/list?pacienteId=${pacienteId}`);
   }
+  
 }
+
