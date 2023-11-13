@@ -3,21 +3,23 @@
   <form (submit)="onSubmit()">
   
     <div class="form-group">
-      <label for="radiografias">Radiografias:</label>
-      <input type="text" id="radiografias" name="radiografias" [(ngModel)]="histClinicaData.radiografias" class="form-control">
+      <label for="radiografias">Seleccionar Imagen:</label>
+      <input type="file" id="radiografias" name="radiografias" class="form-control" accept="image/*" (change)="onFileSelected($event)" required>
     </div>
     <div class="form-group">
-      <label for="tipo">Tratamiento:</label>
-      <input type="text" id="tipo" name="tipo" [(ngModel)]="histClinicaData.tipo" class="form-control" required>
+      <label for="id_tipo" class="form-label">Tratamiento:</label>
+      <select id="id_tipo" name="id_tipo" [(ngModel)]="histClinicaData.tipo" class="form-select">
+        <option *ngFor="let tratamiento of tratamientos" [value]="tratamiento.tipo">{{ tratamiento.tipo }}</option>
+      </select>
     </div>
     <div class="form-group">
-      <label for="id_doctor">Doctor:</label>
-      <input type="text" id="id_doctor" name="id_doctor" [(ngModel)]="histClinicaData.id_doctor" class="form-control" required>
+      <label for="id_doctor" class="form-label">Doctor:</label>
+      <select id="id_doctor" name="id_doctor" [(ngModel)]="histClinicaData.nombre_doctor" class="form-select">
+        <option *ngFor="let doctor of doctores" [value]="doctor.id_doctor">{{ doctor.nombre }}</option>
+      </select>
     </div>
-    <div class="form-group">
-      <label for="id_paciente">Paciente:</label>
-      <input type="text" id="id_paciente" name="id_paciente" [(ngModel)]="histClinicaData.id_paciente" class="form-control" required>
-    </div>
+    
+
     <div class="form-group">
       <label for="fecha_registro">Fecha de Registro:</label>
       <input type="date" id="fecha_registro" name="fecha_registro" [(ngModel)]="histClinicaData.fecha_registro" class="form-control" required>
