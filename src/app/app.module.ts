@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EscritorioModule } from './modules/escritorio/escritorio.module';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component'; // Importa el componente de la barra de navegación
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component'; // Importa el compo
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    EscritorioModule
+    EscritorioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -21,13 +21,9 @@ ngOnInit(): void {
 
 getHistClinica() {
   this.histClinicaService.getAllHistClinica().subscribe((data: any) => {
-    this.histClinicas = data.map((histClinica: { fecha_registro: string | number | Date; }) => {
-      histClinica.fecha_registro = new Date(histClinica.fecha_registro).toLocaleDateString('en-GB');
-      return histClinica;
+   this.histClinicas = data;
     });
-  });
+  }
 }
 
-
-}
 
