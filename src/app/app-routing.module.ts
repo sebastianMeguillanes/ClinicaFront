@@ -36,7 +36,14 @@ const routes: Routes = [
         import('./modules/histClinica/histClinica.module').then(
           (m) => m.HistClinicaModule
         ),
-    }
+    },
+    {
+      path: 'agenda',
+        loadChildren: () =>
+          import('./modules/agenda/agenda.module').then(
+            (m) => m.AgendaModule
+          ),
+      }
 ];
 
 @NgModule({

@@ -1,11 +1,11 @@
-// Estilos generales
+
 body {
   font-family: 'Arial', sans-serif;
 }
 
 .container {
   margin: 2%; 
-  margin-left: 20%; 
+  margin-left: 15%; 
 }
 
 h2 {
@@ -14,12 +14,14 @@ h2 {
 
 .table {
   width: 100%;
-  margin-top: 2%; 
-  overflow-x: auto; 
+  margin-top: 0%;
+  overflow-x: auto;
 
   th, td {
-    padding: 1em; 
-    text-align: left;
+    padding: 0.8em; /* Reduzco el padding */
+    font-size: 0.8em; /* Reduzco el tamaño de la fuente */
+    height: 1.5em; /* Ajusto la altura de las filas */
+    text-align: center;
     border: 1px solid #ddd;
   }
 
@@ -30,16 +32,17 @@ h2 {
   tr:hover {
     background-color: #f5f5f5;
   }
+}
 
   .btn {
-    margin-right: 1%; 
+    margin-right: 0%;
   }
-}
+
 
 .btn {
   display: inline-block;
   padding: 0.8em 1.2em; 
-  font-size: 0.8em; 
+  font-size: 0.9em; 
   font-weight: bold;
   text-align: center;
   text-decoration: none;
