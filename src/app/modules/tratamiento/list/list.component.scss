@@ -4,7 +4,8 @@ body {
 }
 
 .container {
-  margin: 2%; 
+  margin: 2%;
+  margin-left: 40%; 
 }
 
 h2 {
@@ -13,7 +14,8 @@ h2 {
 
 .table {
   width: 100%;
-  margin-top: 2%; 
+  margin-top: 2%;
+ 
   overflow-x: auto; 
 
   th, td {
