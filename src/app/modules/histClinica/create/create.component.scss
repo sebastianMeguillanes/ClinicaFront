@@ -4,25 +4,25 @@ body {
 }
 
 .container {
-  margin: 50px;
+  margin: 5%; 
 }
 
 h1 {
   color: #333;
-  align-content: center;
+  text-align: center; 
 }
 
 form {
-  margin-top: 20px;
+  margin-top: 2%; 
 
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 2%; 
 
     label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 0.5em; 
       color: #333;
-      font-size: 20px;
+      font-size: 1.2em; 
       font-weight: bold;
     }
 
@@ -30,26 +30,26 @@ form {
     select,
     textarea {
       width: 100%;
-      padding: 8px;
-      font-size: 20px;
+      padding: 0.5em; 
+      font-size: 0.9em; 
       border: 1px solid #ddd;
-      border-radius: 4px;
+      border-radius: 0.4em; 
       box-sizing: border-box;
     }
 
     input[type="date"] {
-      padding: 8px 0;
+      padding: 0.5em 0;
     }
   }
 
   .btn {
-    margin-right: 5px;
+    margin-right: 0.5em; 
   }
 
   .btn-primary {
     color: #fff;
     background-color: #3498db;
-    font-size: 18px;
+    font-size: 1em; 
 
     &:hover {
       background-color: #2980b9;
@@ -57,11 +57,14 @@ form {
   }
 
   .btn-secondary {
+    margin-bottom: 0.9em;
     color: #333;
     background-color: #ddd;
-    font-size: 18px;
+    font-size: 1em; 
+
     &:hover {
       background-color: #ccc;
     }
   }
 }
+

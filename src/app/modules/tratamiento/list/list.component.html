@@ -1,26 +1,35 @@
 <div class="container">
-    <h2>Tratamientos</h2>
-    <table class="table table-bordered">
-      <thead>
+  <h2>Tratamientos</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Cantidad de Sesiones</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let tratamiento of getCurrentPageItems(); let i = index">
         <tr>
-          <th>Tipo</th>
-          <th>Cantidad de Sesiones</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let tratamiento of tratamientos">
           <td>{{ tratamiento.tipo }}</td>
           <td>{{ tratamiento.cantidad_sesion }}</td>
           <td>
             <a [routerLink]="['/tratamiento/edit', tratamiento.id_tratamiento]" class="btn btn-primary">Detalles</a>
-  
             <a [routerLink]="['/tratamiento/delete']" class="btn btn-danger">Eliminar</a>
           </td>
         </tr>
-      </tbody>
-    </table>
-  
+      </ng-container>
+    </tbody>
+  </table>
+
+  <div class="text-center">
+    <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+    <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+    <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
+  </div>
+
+  <div class="my-3">
     <button [routerLink]="['/tratamiento/create']" class="btn btn-success">Crear Nuevo Tratamiento</button>
   </div>
-  
+</div>
+

@@ -14,6 +14,8 @@ export class EditComponent implements OnInit {
     nombre_doctor: '',
     apellido_doctor: '',
     fecha_registro: '',
+    medicaciones: '',
+    examen_clinico: ''
   };
 
   constructor(

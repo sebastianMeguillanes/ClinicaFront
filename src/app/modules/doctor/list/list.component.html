@@ -1,28 +1,40 @@
 <div class="container">
   <h2>Lista de Doctores</h2>
-
+  
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>CI</th>
         <th>Nombre</th>
         <th>Apellido</th>
+        <th>Nacimiento</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let doctor of doctores">
-        <td>{{ doctor.documento_identidad }}</td>
-        <td>{{ doctor.nombre }}</td>
-        <td>{{ doctor.apellido }}</td>
-        <td>
-          <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
+      <ng-container *ngFor="let doctor of getCurrentPageItems(); let i = index">
+        <tr>
+          <td>{{ doctor.documento_identidad }}</td>
+          <td>{{ doctor.nombre }}</td>
+          <td>{{ doctor.apellido }}</td>
+          <td>{{ doctor.fecha_nacimiento }}</td>
+          <td>
+            <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a>
 
-          <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a>
-        </td>
-      </tr>
+          </td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
+
+  <div class="text-center">
+    <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+    
+    <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+
+    <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
+  </div>
 
   <button [routerLink]="['/doctor/create']" class="btn btn-success">Crear Nuevo Doctor</button>
 </div>

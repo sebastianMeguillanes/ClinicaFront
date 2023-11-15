@@ -1,32 +1,40 @@
 <div class="container">
   <h2>Lista de Pacientes</h2>
+  
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>CI</th>
         <th>Nombre</th>
         <th>Apellido</th>
-        <th>nacimiento</th>
+        <th>Nacimiento</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let paciente of pacientes">
-        <td>{{ paciente.documento_identidad }}</td>
-        <td>{{ paciente.nombre }}</td>
-        <td>{{ paciente.apellido }}</td>
-        <td>{{ paciente.fecha_nacimiento }}</td>
-        <td>
-          <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
-
-          <a [routerLink]="['/paciente/delete']" class="btn btn-danger">Eliminar</a>
-
-          <a [routerLink]="['../../histClinica/list', paciente.id_paciente]" class="btn btn-primary">Historial Clinico</a>
-
-        </td>
-      </tr>
+      <ng-container *ngFor="let paciente of getCurrentPageItems(); let i = index">
+        <tr>
+          <td>{{ paciente.documento_identidad }}</td>
+          <td>{{ paciente.nombre }}</td>
+          <td>{{ paciente.apellido }}</td>
+          <td>{{ paciente.fecha_nacimiento }}</td>
+          <td>
+            <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/paciente/delete']" class="btn btn-danger">Eliminar</a>
+            <a [routerLink]="['../../histClinica/list', paciente.id_paciente]" class="btn btn-primary">Historial Clínico</a>
+          </td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
+
+  <div class="text-center">
+    <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+    
+    <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+
+    <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
+  </div>
 
   <button [routerLink]="['/paciente/create']" class="btn btn-success">Crear Nuevo Paciente</button>
 </div>

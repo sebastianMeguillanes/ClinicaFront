@@ -1,36 +1,44 @@
 <div class="container">
   <h2>Historial Clínico</h2>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Radiografia</th>
-        <th>Tratamiento</th>
-        <th>Nombre Doctor</th>
-        <th>Apellido Doctor</th>
-        <th>Fecha de Registro</th>
-        <th>Medicaciones</th>
-        <th>Estado de Historial Clinica</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let histClinica of histClinicas">
-        <td>{{ histClinica.radiografias }}</td>
-          <td>{{ histClinica.tipo_tratamiento }}</td>
-          <td>{{ histClinica.nombre_doctor }}</td>
-          <td>{{ histClinica.apellido_doctor }}</td>
-          <td>{{ histClinica.fecha_registro }}</td>
-          <td>{{ histClinica.medicaciones}}</td>
-          <td>{{ histClinica.estado_historial }}</td>
-        <td>
-          <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
-          <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
-          <a [href]="'https://clinicaback.dev.404.codes/api/v1/histClinica/radiografia/' + histClinica.radiografias" class="btn btn-primary">Radiografia</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Radiografía</th>
+          <th>Tratamiento</th>
+          <th>Nombre del Doctor</th>
+          <th>Apellido del Doctor</th>
+          <th>Fecha de Registro</th>
+
+          <th>Estado del Historial Clínico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let histClinica of getCurrentPageItems(); let i = index">
+          <tr>
+            <td>{{ histClinica.radiografias }}</td>
+            <td>{{ histClinica.tipo_tratamiento }}</td>
+            <td>{{ histClinica.nombre_doctor }}</td>
+            <td>{{ histClinica.apellido_doctor }}</td>
+            <td>{{ histClinica.fecha_registro }}</td>
+
+            <td>{{ histClinica.estado_historial }}</td>
+            <td>
+              <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
+              <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
+              <a [href]="'https://clinicaback.dev.404.codes/api/v1/histClinica/radiografia/' + histClinica.radiografias" class="btn btn-primary">Radiografía</a>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+
+  <div class="text-center">
+    <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+    <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+    <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
+  </div>
 
   <button [routerLink]="['/histClinica/create']" class="btn btn-success">Crear Nuevo Historial Clínico</button>
 </div>
-
