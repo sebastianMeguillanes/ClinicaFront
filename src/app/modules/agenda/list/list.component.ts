@@ -13,6 +13,12 @@ export class ListComponent implements OnInit {
   constructor(private agendaService: AgendaService) {}
 
   ngOnInit() {
-    
+    this.getAgendas();
   }
-}
+
+  getAgendas() {
+    this.agendaService.getAllAgenda().subscribe((data: any) => {
+      this.agendas = data;
+    });
+  }
+  }

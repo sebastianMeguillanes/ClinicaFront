@@ -8,18 +8,39 @@ import { AgendaService } from '../agenda.service';
   styleUrls: ['./edit.component.scss'],
 })
 export class EditComponent implements OnInit {
-    agendaData: any = {
+  agendaData: any = {
+  nombre_paciente: '',
+  ci_paciente: '',
+  fecha_hora: '',
+  descripcion: '',
+  nombre_doctor: ''
+};
 
-  };
+constructor(
+private agendaService: AgendaService,
+private route: ActivatedRoute,
+private router: Router,
+) {}
 
-  constructor(
-    private agendaService: AgendaService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
-
-  ngOnInit(): void {
-    
-  }
+ngOnInit(): void {
+  const doctorId = this.route.snapshot.params['id'];
+  this.agendaService.getAgendaById(doctorId).subscribe((response: any) => {
+    console.log(response);
+    this.agendaData = response;
+  });
 }
+
+onSubmit() {
+  const agendaId = this.route.snapshot.params['id'];
+  this.agendaData.fecha_hora = new Date(this.agendaData.fecha_hora);
+  this.agendaService.updateAgenda(agendaId, this.agendaData).subscribe((response: any) => {
+    window.history.back();
+  });
+}
+
+goBack() {
+this.router.navigate(['/agenda/list']);
+}
+}
+
   
