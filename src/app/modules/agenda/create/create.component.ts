@@ -10,8 +10,8 @@ import { DoctorService } from '../../doctor/doctor.service'
 export class CreateComponent {
   doctores: any[] = [];
   agendaData: any = {
-  nombre_paciente: '',
-  ci_paciente: '',
+  nombre: '',
+  ci: '',
   fecha_hora: '',
   descripcion: '',
   nombre_doctor: ''
