@@ -15,6 +15,7 @@ export class CreateComponent {
 
   constructor(private tratamientoService: TratamientoService, private router: Router) {}
 
+  
   onSubmit() {
     // Llamar al servicio para crear un paciente con this.pacienteData
     this.tratamientoService.createTratamiento(this.tratamientoData).subscribe((response: any) => {
@@ -27,4 +28,3 @@ export class CreateComponent {
     this.router.navigate(['/tratamiento/list']); // Volver atrás sin guardar cambios
   }
 }
-

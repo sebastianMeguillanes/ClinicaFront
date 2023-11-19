@@ -2,25 +2,30 @@
     <h1>Editar Cita</h1>
     <form (submit)="onSubmit()">
         <div class="form-group">
-            <label for="nombre">Paciente:</label>
-            <input type="text" id="nombre" name="nombre" [(ngModel)]="agendaData.nombre" class="form-control" required>
+            <label for="nombre_paciente">Paciente:</label>
+            <input type="text" id="nombre_paciente" name="nombre_paciente" [(ngModel)]="agendaData.nombre_paciente" class="form-control" required>
           </div>
+
           <div class="form-group">
             <label for="ci">Carnet del Paciente:</label>
             <input type="text" id="ci" name="ci" [(ngModel)]="agendaData.ci" class="form-control" required>
           </div>
+
           <div class="form-group">
             <label for="fecha_hora">Fecha y Hora de la Cita:</label>
             <input type="datetime-local" id="fecha_hora" name="fecha_hora" [(ngModel)]="agendaData.fecha_hora" class="form-control" required>
           </div>
+
           <div class="form-group">
             <label for="descripcion">Descripcion</label>
             <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData.descripcion" class="form-control" required>
           </div>
+
           <div class="form-group">
             <label for="nombre_doctor">Doctor:</label>
             <input type="text" id="nombre_doctor" name="nombre_doctor" [(ngModel)]="agendaData.nombre_doctor" class="form-control" required>
           </div>
+
       <button type="submit" class="btn btn-primary">Guardar Cambios</button>
       <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
     </form>

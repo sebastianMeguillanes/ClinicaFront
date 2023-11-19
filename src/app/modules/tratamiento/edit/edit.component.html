@@ -1,16 +1,24 @@
 <div class="container">
-    <h1>Editar Tratamiento</h1>
-    <form (submit)="onSubmit()">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center">Editar Tratamiento</h1>
+      <form (submit)="onSubmit()">
         <div class="form-group">
-            <label for="tipo">Tipo:</label>
-            <input type="text" id="tipo" name="tipo" [(ngModel)]="tratamientoData.tipo" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="cantidad_sesion">Cantidad de Sesiones:</label>
-            <input type="text" id="cantidad_sesion" name="cantidad_sesion" [(ngModel)]="tratamientoData.cantidad_sesion" class="form-control" required>
-          </div>
-      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-      <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
-    </form>
+          <label for="tipo">Tipo:</label>
+          <input type="text" id="tipo" name="tipo" [(ngModel)]="tratamientoData.tipo" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad_sesion">Cantidad de Sesiones:</label>
+          <input type="text" id="cantidad_sesion" name="cantidad_sesion" [(ngModel)]="tratamientoData.cantidad_sesion" class="form-control" required>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+          <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
+        </div>
+        
+      </form>
+    </div>
   </div>
-  
+</div>

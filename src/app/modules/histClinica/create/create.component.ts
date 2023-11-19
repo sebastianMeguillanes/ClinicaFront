@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HistClinicaService } from '../histClinica.service';
-import { DoctorService } from '../../doctor/doctor.service'
-import { TratamientoService } from '../../tratamiento/tratamiento.service'
+import { DoctorService } from '../../doctor/doctor.service';
+import { TratamientoService } from '../../tratamiento/tratamiento.service';
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
 })
-export class CreateComponent {
+export class CreateComponent implements OnInit {
   tratamientos: any[] = [];
   doctores: any[] = [];
-  selectedImage: File | undefined
+  selectedImage: File | undefined;
   histClinicaData: any = {
+    id_paciente: '',
     radiografias: '',
     tipo: '',
     nombre_doctor: '',
@@ -21,9 +23,26 @@ export class CreateComponent {
     examen_clinico: '',
   };
 
-  constructor(private histClinicaService: HistClinicaService, private router: Router, private doctorService: DoctorService, private tratamientoService: TratamientoService) {}
+  // Nueva variable para almacenar el valor del parámetro 'id_paciente'
+  idPaciente: string = '';
 
-  ngOnInit(){
+  constructor(
+    private histClinicaService: HistClinicaService,
+    private router: Router,
+    private route: ActivatedRoute, // Agregamos ActivatedRoute aquí
+    private doctorService: DoctorService,
+    private tratamientoService: TratamientoService
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      // params contiene todos los parámetros de la ruta
+      // params['id'] contiene el valor del parámetro 'id'
+      const id = +params['id']; // Convierte el valor a un número si es necesario
+      window.alert(id);
+  
+     
+    });
     this.getDoctores();
     this.getTratamientos();
   }
@@ -33,6 +52,7 @@ export class CreateComponent {
       this.doctores = data;
     });
   }
+
   getTratamientos() {
     this.tratamientoService.getAllTratamientos().subscribe((data: any) => {
       this.tratamientos = data;
@@ -44,17 +64,18 @@ export class CreateComponent {
   }
 
   onSubmit() {
-    // Llamar al servicio para crear un historial clinico con this.pacienteData
+    // Asignamos el valor del parámetro 'id_paciente' al objeto histClinicaData
+    this.histClinicaData.id_paciente = this.idPaciente;
+
+    // Llamar al servicio para crear un historial clínico con this.histClinicaData
     this.histClinicaService.createHistClinica(this.histClinicaData).subscribe((response: any) => {
       // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
       window.history.back();
     });
   }
 
-
   goBack() {
     // Navegar a la página anterior en el historial del navegador
     window.history.back();
   }
 }
-

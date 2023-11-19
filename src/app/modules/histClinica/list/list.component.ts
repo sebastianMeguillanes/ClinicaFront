@@ -52,4 +52,5 @@ export class ListComponent implements OnInit {
       this.currentPage++;
     }
   }
+
 }
