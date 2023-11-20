@@ -1,13 +1,17 @@
+// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../app/modules/auth-guard.service'; // Ajusta la ruta según tu estructura
+
 const routes: Routes = [
-  { path: '', redirectTo: 'escritorio', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'paciente',
     loadChildren: () =>
       import('./modules/paciente/paciente.module').then(
         (m) => m.PacienteModule
       ),
+    canActivate: [AuthGuard] // Proteger la ruta paciente
   },
   {
     path: 'doctor',
@@ -15,6 +19,7 @@ const routes: Routes = [
       import('./modules/doctor/doctor.module').then(
         (m) => m.DoctorModule
       ),
+    canActivate: [AuthGuard] // Proteger la ruta doctor
   },
   {
     path: 'escritorio',
@@ -22,36 +27,39 @@ const routes: Routes = [
       import('./modules/escritorio/escritorio.module').then(
         (m) => m.EscritorioModule
       ),
+    canActivate: [AuthGuard] // Proteger la ruta escritorio
   },
   {
-  path: 'tratamiento',
+    path: 'tratamiento',
     loadChildren: () =>
       import('./modules/tratamiento/tratamiento.module').then(
         (m) => m.TratamientoModule
       ),
+    canActivate: [AuthGuard] // Proteger la ruta tratamiento
   },
   {
     path: 'histClinica',
-      loadChildren: () =>
-        import('./modules/histClinica/histClinica.module').then(
-          (m) => m.HistClinicaModule
-        ),
-    },
-    {
-      path: 'agenda',
-        loadChildren: () =>
-          import('./modules/agenda/agenda.module').then(
-            (m) => m.AgendaModule
-          ),
-      },
-
-      {
-        path: 'login',
-        loadChildren: () =>
-          import('./modules/login/login.module').then(
-            (m) => m.LoginModule
-          ),
-      }
+    loadChildren: () =>
+      import('./modules/histClinica/histClinica.module').then(
+        (m) => m.HistClinicaModule
+      ),
+    canActivate: [AuthGuard] // Proteger la ruta histClinica
+  },
+  {
+    path: 'agenda',
+    loadChildren: () =>
+      import('./modules/agenda/agenda.module').then(
+        (m) => m.AgendaModule
+      ),
+    canActivate: [AuthGuard] // Proteger la ruta agenda
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./modules/login/login.module').then(
+        (m) => m.LoginModule
+      ),
+  },
 ];
 
 @NgModule({
@@ -59,4 +67,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-

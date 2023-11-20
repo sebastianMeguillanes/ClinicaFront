@@ -1,12 +1,18 @@
+// src/app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EscritorioModule } from './modules/escritorio/escritorio.module';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';// Importa el componente de la barra de navegación
+import { NavbarComponent } from './navbar/navbar.component';
+import { AuthInterceptor } from '../app/modules/auth.interceptor';
+import { AuthService } from '../app/modules/auth.service';
+import { AuthGuard } from '../app/modules/auth-guard.service'; // Ajusta la ruta según tu estructura
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +24,18 @@ import { NavbarComponent } from './navbar/navbar.component';// Importa el compon
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    EscritorioModule
+    EscritorioModule,
+    RouterModule // Agrega RouterModule aquí
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard, // Agrega el guardia de ruta a los providers
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

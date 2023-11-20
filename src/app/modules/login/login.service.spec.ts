@@ -1,15 +1,19 @@
-import { TestBed } from '@angular/core/testing';
-import { LoginService } from './login.service';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-describe('LoginService', () => {
-  let service: LoginService;
+@Injectable({
+  providedIn: 'root',
+})
+export class LoginService {
+  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/login/';
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LoginService);
-  });
+  constructor(private http: HttpClient) {}
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+ 
+  login (data: any){
+    return this.http.post(`${this.apiUrl}`,data);
+  }
+
+
+ 
+}

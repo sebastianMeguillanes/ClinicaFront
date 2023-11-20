@@ -6,9 +6,9 @@ import { CreateComponent } from './create/create.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'create', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
   //{ path: 'list', component: ListComponent },
-  { path: 'create', component: CreateComponent },
+  { path: '', component: CreateComponent },
   //{ path: 'edit/:id', component: EditComponent },
 
 ];

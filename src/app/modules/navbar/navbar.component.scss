@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+  
+      li {
+        a {
+          text-decoration: none;
+          color: #fff;
+          cursor: pointer;
+          transition: opacity 0.3s;
+  
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+  

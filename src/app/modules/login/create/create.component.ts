@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
+import { AuthService } from '../../auth.service'; // Ajusta la ruta según tu estructura
 
 @Component({
   selector: 'app-create',
@@ -13,18 +14,23 @@ export class CreateComponent {
     contrasena: ''
   };
 
-  constructor(private LoginService: LoginService, private router: Router) {}
+  constructor(
+    private loginService: LoginService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   onSubmit() {
-    // Llamar al servicio para crear un paciente con this.pacienteData
-    this.LoginService.login(this.loginData).subscribe(() => {
-      // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
-      // this.router.navigate(['/login/list']); // Redirigir a la lista de pacientes
+    // Llamar al servicio para realizar el inicio de sesión
+    this.loginService.login(this.loginData).subscribe((response: any) => {
+      // Manejar la respuesta del servicio
+      console.log('Inicio de sesión exitoso', response);
+
+      // Guardar el token en el servicio de autenticación
+      this.authService.setToken(response.token);
+
+      // Redirigir a la página deseada después del inicio de sesión
+      this.router.navigate(['/escritorio']);
     });
   }
-
-  // goBack() {
-  //   this.router.navigate(['/doctor/list']); // Volver atrás sin guardar cambios
-  // }
 }
-
