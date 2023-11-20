@@ -1,34 +1,57 @@
 <div class="container">
-    <h1>Editar Cita</h1>
-    <form (submit)="onSubmit()">
-        <div class="form-group">
-            <label for="nombre_paciente">Paciente:</label>
-            <input type="text" id="nombre_paciente" name="nombre_paciente" [(ngModel)]="agendaData.nombre_paciente" class="form-control" required>
-          </div>
+  <h1>Editar Agenda</h1>
+  <form (submit)="onSubmit()" class="row">
 
-          <div class="form-group">
-            <label for="ci">Carnet del Paciente:</label>
-            <input type="text" id="ci" name="ci" [(ngModel)]="agendaData.ci" class="form-control" required>
-          </div>
+    <!-- Columna izquierda -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="nombre_paciente">Paciente:</label>
+        <input type="text" id="nombre_paciente" name="nombre_paciente" [(ngModel)]="agendaData.nombre_paciente" class="form-control" required>
+      </div>
 
-          <div class="form-group">
-            <label for="fecha_hora">Fecha y Hora de la Cita:</label>
-            <input type="datetime-local" id="fecha_hora" name="fecha_hora" [(ngModel)]="agendaData.fecha_hora" class="form-control" required>
-          </div>
+      <div class="form-group">
+        <label for="ci">ci:</label>
+        <input type="text" id="ci" name="ci" [(ngModel)]="agendaData.ci" class="form-control" required>
+      </div>
 
-          <div class="form-group">
-            <label for="descripcion">Descripcion</label>
-            <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData.descripcion" class="form-control" required>
-          </div>
+      <div class="form-group">
+        <label for="fecha_hora">fecha_hora:</label>
+        <input type="text" id="fecha_hora" name="fecha_hora" [(ngModel)]="agendaData.fecha_hora" class="form-control" required>
+      </div>
 
-          <div class="form-group">
-            <label for="nombre_doctor">Doctor:</label>
-            <input type="text" id="nombre_doctor" name="nombre_doctor" [(ngModel)]="agendaData.nombre_doctor" class="form-control" required>
-          </div>
+      <div class="form-group">
+        <label for="descripcion">descripcion:</label>
+        <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData.descripcion" class="form-control" required>
+      </div>
+    </div>
 
+    <!-- Columna derecha -->
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="documento_identidad">Documento de Identidad:</label>
+        <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="agendaData.documento_identidad" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" [(ngModel)]="agendaData.sexo" class="form-control" required>
+          <option value="M">Masculino</option>
+          <option value="F">Femenino</option>
+          <option value="O">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="agendaData.fecha_nacimiento" class="form-control" required>
+      </div>
+    </div>
+
+    <!-- Columna para botones -->
+    <div class="col-md-12 mt-3">
       <button type="submit" class="btn btn-primary">Guardar Cambios</button>
       <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
-    </form>
+    </div>
+
+  </form>
 </div>
-  
-  

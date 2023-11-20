@@ -7,25 +7,28 @@ import { HttpClient } from '@angular/common/http';
 export class AgendaService {
  private apiUrl = 'https://clinicaback.dev.404.codes/api/v1/agenda/';
 
- constructor(private http: HttpClient) {}
+ // private apiUrl = 'http://localhost:2000/api/v1/paciente/';
 
- getAllAgenda() {
-   return this.http.get(`${this.apiUrl}`);
- }
 
- getAgendaById(id: number) {
-   return this.http.get(`${this.apiUrl}${id}`);
- }
+  constructor(private http: HttpClient) {}
 
- createAgenda(data: any) {
-   return this.http.post(`${this.apiUrl}`, data);
- }
+  getAllAgenda() {
+    return this.http.get(`${this.apiUrl}`);
+  }
 
- updateAgenda(id: number, data: any) {
-   return this.http.put(`${this.apiUrl}${id}`, data);
- }
+  getAgendaById(id: number) {
+    return this.http.get(`${this.apiUrl}${id}`);
+  }
 
- deleteAgenda(id: number) {
-   return this.http.delete(`${this.apiUrl}${id}`);
- }
+  createAgenda(data: any) {
+    return this.http.post(`${this.apiUrl}`, data);
+  }
+
+  updateAgenda(id: number, data: any) {
+    return this.http.put(`${this.apiUrl}${id}`, data);
+  }
+
+  deleteAgenda(id: number) {
+    return this.http.delete(`${this.apiUrl}${id}`);
+  }
 }

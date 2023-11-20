@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Usuarios</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Usuario</th>
+          <th>contraseña</th>
+          <th>Direccion Correo Electronico</th>
+          <th>Permisos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let usuario of getCurrentPageItems(); let i = index">
+          <tr>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.usuario }}</td>
+            <td>{{ usuario.contrasena }}</td>
+            <td>{{ usuario.direccion_correo_electronico }}</td>
+            <td>{{ usuario.permisos_rol }}</td>
+            <td>
+              <a [routerLink]="['/usuario/edit', usuario.id_usuario]" class="btn btn-primary">Detalles</a>
+              <a [routerLink]="['/usuario/delete']" class="btn btn-danger">Eliminar</a>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  
+    <div class="text-center">
+      <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+      <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+      <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
+    </div>
+  
+    <div class="my-3">
+      <button [routerLink]="['/usuario/create']" class="btn btn-success">Crear Nuevo Usuario</button>
+    </div>
+  </div>
+  
+  

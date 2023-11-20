@@ -23,6 +23,7 @@ export class EditComponent implements OnInit {
     const tratamientoId = this.route.snapshot.params['id'];
 
     this.tratamientoService.getTratamientoById(tratamientoId).subscribe((response: any) => {
+      console.log("response")
       this.tratamientoData = response;
     });
   }

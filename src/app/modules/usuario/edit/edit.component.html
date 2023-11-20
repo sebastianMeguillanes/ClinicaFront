@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Editar Usuarios</h1>
+    <form (submit)="onSubmit()">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="usuarioData.nombre" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" [(ngModel)]="usuarioData.usuario" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="text" id="contrasena" name="contrasena" [(ngModel)]="usuarioData.contrasena" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="direccion_correo_electronico">Direccion Correo Electronico:</label>
+            <input type="text" id="direccion_correo_electronico" name="direccion_correo_electronico" [(ngModel)]="usuarioData.direccion_correo_electronico" class="form-control" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="id_rol">Rol:</label>
+            <input type="text" id="id_rol" name="id_rol" [(ngModel)]="usuarioData.id_rol" class="form-control" required>
+          </div>
+  
+      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      <button type="button" class="btn btn-secondary" (click)="goBack()">Cancelar</button>
+    </form>
+  </div>
