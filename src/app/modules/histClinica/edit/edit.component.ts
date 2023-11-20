@@ -11,8 +11,8 @@ export class EditComponent implements OnInit {
   histClinicaData: any = {
     radiografias: '',
     tipo: '',
-    nombre_doctor: '',
-    apellido_doctor: '',
+    nombre: '',
+    apellido: '',
     fecha_registro: '',
     medicaciones: '',
     examen_clinico: ''
@@ -26,9 +26,12 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     const histClinicaId = this.route.snapshot.params['id'];
-
-    this.histClinicaService.getHistClinicaById(histClinicaId).subscribe((response: any) => {
+    
+    this.histClinicaService.getImage(histClinicaId).subscribe((response: any) => {
       this.histClinicaData = response;
+     // window.alert(JSON.stringify(this.histClinicaData.datos.examen_clinico))
+     // window.alert('Contenido de this.agendaData: \n' + JSON.stringify(response, null, 2));
+      //window.alert(this.histClinicaData.image)
       this.histClinicaData.fecha_registro = new Date(this.histClinicaData.fecha_registro);
     });
   }

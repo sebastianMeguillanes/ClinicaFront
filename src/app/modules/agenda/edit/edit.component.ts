@@ -35,9 +35,9 @@ export class EditComponent implements OnInit {
     this.agendaService.getAgendaById(agendaId).subscribe((response: any) => {
       //window.alert('Contenido de this.agendaData: \n' + JSON.stringify(response, null, 2));
       this.agendaData = response;
-     // window.alert('Contenido de this.agendaData: \n' + JSON.stringify(this.agendaData , null, 2));
-      window.alert(this.agendaData.nombre_paciente)
-      // Resto del código...
+      //window.alert('Contenido de this.agendaData: \n' + JSON.stringify(this.agendaData));
+     //window.alert( JSON.stringify(this.agendaData[0].nombre_paciente))
+      
     });
   }
   

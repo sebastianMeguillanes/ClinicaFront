@@ -36,12 +36,15 @@ export class HistClinicaService {
   }
 
   getImage(id: number) {
-    return this.http.get(`${this.apiUrl}${id}`);
+    return this.http.get(`${this.apiUrl}/radiografia/${id}`);
   }
 
   getHistClinicaByPacienteId(pacienteId: number) {
     return this.http.get(`${this.apiUrl}/histClinica/list?pacienteId=${pacienteId}`);
   }
+
+  
+  
   
 }
 

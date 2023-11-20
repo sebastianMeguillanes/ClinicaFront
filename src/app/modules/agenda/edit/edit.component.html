@@ -6,22 +6,22 @@
     <div class="col-md-6">
       <div class="form-group">
         <label for="nombre_paciente">Paciente:</label>
-        <input type="text" id="nombre_paciente" name="nombre_paciente" [(ngModel)]="agendaData.nombre_paciente" class="form-control" required>
+        <input type="text" id="nombre_paciente" name="nombre_paciente" [(ngModel)]="agendaData[0].nombre_paciente" class="form-control" required>
       </div>
 
       <div class="form-group">
         <label for="ci">ci:</label>
-        <input type="text" id="ci" name="ci" [(ngModel)]="agendaData.ci" class="form-control" required>
+        <input type="text" id="ci" name="ci" [(ngModel)]="agendaData[0].ci" class="form-control" required>
       </div>
 
       <div class="form-group">
         <label for="fecha_hora">fecha_hora:</label>
-        <input type="text" id="fecha_hora" name="fecha_hora" [(ngModel)]="agendaData.fecha_hora" class="form-control" required>
+        <input type="text" id="fecha_hora" name="fecha_hora" [(ngModel)]="agendaData[0].fecha_hora" class="form-control" required>
       </div>
 
       <div class="form-group">
         <label for="descripcion">descripcion:</label>
-        <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData.descripcion" class="form-control" required>
+        <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData[0].descripcion" class="form-control" required>
       </div>
     </div>
 
@@ -29,12 +29,12 @@
     <div class="col-md-6">
       <div class="form-group">
         <label for="documento_identidad">Documento de Identidad:</label>
-        <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="agendaData.documento_identidad" class="form-control" required>
+        <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="agendaData[0].documento_identidad" class="form-control" required>
       </div>
 
       <div class="form-group">
         <label for="sexo">Sexo:</label>
-        <select id="sexo" name="sexo" [(ngModel)]="agendaData.sexo" class="form-control" required>
+        <select id="sexo" name="sexo" [(ngModel)]="agendaData[0].sexo" class="form-control" required>
           <option value="M">Masculino</option>
           <option value="F">Femenino</option>
           <option value="O">Otro</option>
@@ -43,7 +43,7 @@
 
       <div class="form-group">
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="agendaData.fecha_nacimiento" class="form-control" required>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="agendaData[0].fecha_nacimiento" class="form-control" required>
       </div>
     </div>
 
