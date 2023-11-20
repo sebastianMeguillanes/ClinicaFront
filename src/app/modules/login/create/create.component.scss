@@ -1,70 +1,53 @@
-// Estilos generales
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Medium Italic', sans-serif;
+  margin: 0;
 }
 
 .container {
-  margin: 5%; 
-  margin-left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 70%;
 }
 
 h1 {
   color: #333;
-  text-align: center; 
+  text-align: center;
 }
 
 form {
-  margin-top: 2%; 
+  background-color: #159f98;
+  font-family: 'Medium Italic', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
 
   .form-group {
-    margin-bottom: 2%; 
+    margin-bottom: 20px;
 
-    label {
+    img {
       display: block;
-      margin-bottom: 0.5em; 
-      color: #333;
-      font-size: 1.2em; 
-      font-weight: bold;
+      margin: 0 auto;
     }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.8em; 
-      font-size: 0.9em; 
+    input {
+      width: 120%;
+      padding: 8px;
+      font-size: 1.2em;
       border: 1px solid #ddd;
-      border-radius: 0.4em; 
+      border-radius: 5px;
       box-sizing: border-box;
+      margin-left: 40%;
     }
-
-    input[type="date"] {
-      padding: 0.8em 0;
-    }
-  }
-
-  .btn {
-    margin-right: 0.5em; 
   }
 
   .btn-primary {
     color: #fff;
-    background-color: #3498db;
-    font-size: 1em; 
-
-    &:hover {
-      background-color: #2980b9;
-    }
-  }
-
-  .btn-secondary {
-    margin-bottom: 0.9em;
-    color: #333;
-    background-color: #ddd;
-    font-size: 1em; 
-
-    &:hover {
-      background-color: #ccc;
-    }
-  }
+    background-color: #002d2b;
+    font-size: 1.4em;
+    padding: 5px;
+    width: 40%; 
+    margin-top: 2%;
+    margin-left: 28%;
+}
 }

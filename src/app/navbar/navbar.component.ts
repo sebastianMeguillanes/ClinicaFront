@@ -18,4 +18,7 @@ export class NavbarComponent {
   irATratamientoList() {
     this.router.navigate(['/tratamiento/list']); // Redirigir a la página de Tratamientos
   }
+  irAAgendaList() {
+    this.router.navigate(['/agenda/list']); // Redirigir a la página de Agenda
+  }
 }

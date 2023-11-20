@@ -1,10 +1,12 @@
 // Estilos generales
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Medium Italic', sans-serif;
 }
 
 .container {
   margin: 5%; 
+  margin-left: 30%; 
+  
 }
 
 h1 {
@@ -13,7 +15,8 @@ h1 {
 }
 
 form {
-  margin-top: 2%; 
+  margin-top: 2%;
+  
 
   .form-group {
     margin-bottom: 2%; 
@@ -35,6 +38,7 @@ form {
       border: 1px solid #ddd;
       border-radius: 0.4em; 
       box-sizing: border-box;
+      
     }
 
     input[type="date"] {
