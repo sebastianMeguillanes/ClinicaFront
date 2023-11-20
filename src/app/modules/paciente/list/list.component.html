@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Lista de Pacientes</h2>
-  
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -30,7 +30,7 @@
 
   <div class="text-center">
     <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
-    
+
     <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
 
     <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>

@@ -1,3 +1,4 @@
+// list.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AgendaService } from '../agenda.service';
 
@@ -7,8 +8,9 @@ import { AgendaService } from '../agenda.service';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
-  agendas: any[] = [
-  ];
+  agendas: any[] = [];
+  p: number = 1; // Página actual
+  itemsPerPage: number = 5;
 
   constructor(private agendaService: AgendaService) {}
 
@@ -21,4 +23,12 @@ export class ListComponent implements OnInit {
       this.agendas = data;
     });
   }
+
+  // Agrega confirmación antes de eliminar
+  deleteAgenda(id: number) {
+    const confirmDelete = window.confirm('¿Seguro que quieres eliminar esta agenda?');
+    if (confirmDelete) {
+      // Lógica de eliminación aquí
+    }
   }
+}

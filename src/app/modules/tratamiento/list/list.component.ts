@@ -8,7 +8,7 @@ import { TratamientoService } from '../tratamiento.service';
 })
 export class ListComponent implements OnInit {
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 5;
   pages: number[] = [];
   totalPages: number = 0;
   tratamientos: any[] = [
@@ -52,7 +52,14 @@ export class ListComponent implements OnInit {
   getTratamientos() {
     this.tratamientoService.getAllTratamientos().subscribe((data: any) => {
       this.tratamientos = data;
-      this.updatePages();  
+      this.updatePages();
     });
+  }
+
+  deleteTratamiento(id: number) {
+    const confirmDelete = window.confirm('¿Seguro que quieres eliminar este tratamiento?');
+    if (confirmDelete) {
+      // Lógica de eliminación aquí
+    }
   }
   }

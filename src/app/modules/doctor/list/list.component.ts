@@ -8,7 +8,7 @@ import { DoctorService } from '../doctor.service';
 })
 export class ListComponent implements OnInit {
   currentPage: number = 1;
-  itemsPerPage: number = 10;
+  itemsPerPage: number = 5;
   pages: number[] = [];
   totalPages: number = 0;
   doctores: any[] = [];
@@ -29,7 +29,7 @@ export class ListComponent implements OnInit {
   setCurrentPage(page: number) {
     this.currentPage = page;
   }
-  
+
   getCurrentPageItems() {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
@@ -40,7 +40,7 @@ export class ListComponent implements OnInit {
     if (this.currentPage > 1) {
       this.currentPage--;
     }
-  } 
+  }
 
   nextPage() {
     if (this.currentPage < this.totalPages) {

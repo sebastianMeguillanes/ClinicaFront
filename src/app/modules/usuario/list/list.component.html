@@ -8,6 +8,7 @@
           <th>contraseña</th>
           <th>Direccion Correo Electronico</th>
           <th>Permisos</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -26,16 +27,15 @@
         </ng-container>
       </tbody>
     </table>
-  
+
     <div class="text-center">
       <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
       <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
       <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
     </div>
-  
+
     <div class="my-3">
       <button [routerLink]="['/usuario/create']" class="btn btn-success">Crear Nuevo Usuario</button>
     </div>
   </div>
-  
-  
+

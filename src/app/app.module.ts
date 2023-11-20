@@ -12,6 +12,7 @@ import { AuthInterceptor } from '../app/modules/auth.interceptor';
 import { AuthService } from '../app/modules/auth.service';
 import { AuthGuard } from '../app/modules/auth-guard.service'; // Ajusta la ruta según tu estructura
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     FormsModule,
     EscritorioModule,
-    RouterModule // Agrega RouterModule aquí
+    RouterModule ,
+    NgxPaginationModule,
   ],
   providers: [
     AuthService,

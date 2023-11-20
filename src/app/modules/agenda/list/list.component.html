@@ -1,3 +1,4 @@
+<!-- list.component.html -->
 <div class="container">
   <h2>Agenda</h2>
   <table class="table table-bordered">
@@ -8,24 +9,31 @@
         <th>Fecha y hora de la cita</th>
         <th>Descripción</th>
         <th>Nombre del Doctor</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let agenda of agendas">
-      <tr>
-        <td>{{ agenda.nombre_paciente }}</td>
-        <td>{{ agenda.ci}}</td>
-        <td>{{ agenda.fecha_hora }}</td>
-        <td>{{ agenda.descripcion }}</td>
-        <td>{{ agenda.nombre}}</td>
-        <td>
-          <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a>
-          <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a>
-        </td>
-      </tr>
-    </ng-container>
+      <ng-container *ngFor="let agenda of agendas | slice: (p-1) * itemsPerPage : (p-1) * itemsPerPage + itemsPerPage">
+        <tr>
+          <td>{{ agenda.nombre_paciente }}</td>
+          <td>{{ agenda.ci }}</td>
+          <td>{{ agenda.fecha_hora }}</td>
+          <td>{{ agenda.descripcion }}</td>
+          <td>{{ agenda.nombre }}</td>
+          <td>
+            <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a>
+          </td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
-  <div class="my-3">
+
+  <div class="my-3 text-left">
     <button [routerLink]="['/agenda/create']" class="btn btn-success">Crear Nueva Cita</button>
   </div>
+
+  <div class="text-center">
+    <pagination-controls [(ngModel)]="p" class="my-3"></pagination-controls>
+  </div>
+</div>

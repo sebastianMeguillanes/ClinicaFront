@@ -4,8 +4,7 @@ body {
 }
 
 .container {
-  margin: 2%; 
-  margin-left: 100%; 
+
 }
 
 h2 {
@@ -41,20 +40,20 @@ h2 {
 
 .btn {
   display: inline-block;
-  padding: 0.8em 1.2em; 
-  font-size: 0.9em; 
+  padding: 0.8em 1.2em;
+  font-size: 0.9em;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid #3498db;
-  border-radius: 0.4em; 
+  border-radius: 0.4em;
   transition: background-color 0.3s;
 
   &.btn-primary,
   &.btn-danger,
   &.btn-success {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
   }
 
   &.btn-primary {
@@ -88,7 +87,7 @@ h2 {
     .btn {
       display: block;
       width: 100%;
-      margin-bottom: 1em; 
+      margin-bottom: 1em;
     }
   }
 }
