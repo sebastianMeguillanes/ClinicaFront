@@ -5,8 +5,7 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   height: 70vh;
   width: 70%;
 }
@@ -33,7 +32,7 @@ form {
     input {
       width: 120%;
       padding: 8px;
-      font-size: 1.2em;
+      font-size: 1.3em;
       border: 1px solid #ddd;
       border-radius: 5px;
       box-sizing: border-box;
