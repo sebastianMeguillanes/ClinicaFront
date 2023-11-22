@@ -1,10 +1,11 @@
 <div class="container">
   <h2>Lista de Pacientes</h2>
   <div>
-    <label for="filtroNombre">Filtrar por nombre:</label>
-    <input type="text" id="filtroNombre" [(ngModel)]="filtroNombre" (input)="filtrarPorNombre()">
+    <label for="filtroNombre">Filtrar por nombre:</label><span>&nbsp;</span>
+    <input type="text" id="filtroNombre" [(ngModel)]="filtroNombre" (input)="filtrarPorNombre()"> <span>&nbsp;</span> 
     <button (click)="reiniciarFiltro()">Reiniciar Filtro</button>
   </div>
+  <br>
   <table class="table table-bordered">
     <thead>
       <tr>
