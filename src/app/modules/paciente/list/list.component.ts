@@ -12,12 +12,20 @@ export class ListComponent implements OnInit {
   pages: number[] = [];
   totalPages: number = 0; 
   pacientes: any[] = [];
-
+  filtroNombre = '';
   constructor(private pacienteService: PacienteService) {}
 
   ngOnInit() {
     this.getPacientes();
   }
+
+  filtrarPorNombre() {
+    this.pacientes = this.pacientes.filter(
+      (paciente) =>
+        paciente.nombre.toLowerCase().includes(this.filtroNombre.toLowerCase())
+    );
+  }
+
   updatePages() {
     if (this.pacientes.length > 0) {
       this.totalPages = Math.ceil(this.pacientes.length / this.itemsPerPage);
@@ -54,5 +62,10 @@ export class ListComponent implements OnInit {
       });
       this.updatePages()
     });
+  }
+  
+  reiniciarFiltro() {
+    this.filtroNombre = '';
+    this.getPacientes(); // Volver a cargar la lista original
   }
 }
