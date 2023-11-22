@@ -7,7 +7,7 @@ import { ListComponent } from './list/list.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { NavbarModule } from '../modulo-navbar.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ListComponent,
     SearchComponent
   ],
-  imports: [CommonModule, AgendaRoutingModule, FormsModule ,NgxPaginationModule],
+  imports: [CommonModule, AgendaRoutingModule, FormsModule ,NgxPaginationModule, NavbarModule],
 })
 export class AgendaModule {}
 

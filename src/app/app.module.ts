@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EscritorioModule } from './modules/escritorio/escritorio.module';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptor } from '../app/modules/auth.interceptor';
 import { AuthService } from '../app/modules/auth.service';
 import { AuthGuard } from '../app/modules/auth-guard.service'; // Ajusta la ruta según tu estructura
@@ -17,7 +16,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,7 @@ export class CreateComponent {
       this.authService.setToken(response.token);
 
       // Redirigir a la página deseada después del inicio de sesión
-      this.router.navigate(['/escritorio']);
+      this.router.navigate(['/paciente']);
     });
   }
 }

@@ -8,15 +8,4 @@ import { Router } from '@angular/router';
 })
 export class EscritorioComponent {
   constructor(private router: Router) {}
-
-  irADoctorList() {
-    this.router.navigate(['/doctor/list']); // Redirigir a la página de Doctores
-  }
-
-  irAPacienteList() {
-    this.router.navigate(['/paciente/list']); // Redirigir a la página de Pacientes
-  }
-  irATratamientoList() {
-    this.router.navigate(['/tratamiento/list']); // Redirigir a la página de Tratamientos
-  }
 }
