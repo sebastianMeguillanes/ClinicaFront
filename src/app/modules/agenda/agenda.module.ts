@@ -4,14 +4,17 @@ import { AgendaRoutingModule } from './agenda-routing.module';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { ListComponent } from './list/list.component';
+import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
     CreateComponent,
     EditComponent,
-    ListComponent
+    ListComponent,
+    SearchComponent
   ],
   imports: [CommonModule, AgendaRoutingModule, FormsModule ,NgxPaginationModule],
 })

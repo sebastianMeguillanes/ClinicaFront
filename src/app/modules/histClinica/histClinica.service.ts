@@ -35,12 +35,18 @@ export class HistClinicaService {
     return this.http.delete(`${this.apiUrl}${id}`);
   }
 
-  getImage(id: number) {
+  getImage(id: number) {  
+    //window.alert(`${this.apiUrl}/radiografia/${id}`)
     return this.http.get(`${this.apiUrl}/radiografia/${id}`);
+
   }
 
   getHistClinicaByPacienteId(pacienteId: number) {
     return this.http.get(`${this.apiUrl}/histClinica/list?pacienteId=${pacienteId}`);
+  }
+
+  updateImage(id: number, data: any) {
+    return this.http.put(`${this.apiUrl}/radiografia/${id}`, data);
   }
 
   

@@ -9,6 +9,7 @@
         <th>Fecha y hora de la cita</th>
         <th>Descripción</th>
         <th>Nombre del Doctor</th>
+        <th>Estado Agenda</th>
         <th>Acciones</th>
       </tr>
     </thead>
@@ -20,6 +21,7 @@
           <td>{{ agenda.fecha_hora }}</td>
           <td>{{ agenda.descripcion }}</td>
           <td>{{ agenda.nombre }}</td>
+          <td>{{ agenda.estado_agenda }}</td>
           <td>
             <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a>
             <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a>

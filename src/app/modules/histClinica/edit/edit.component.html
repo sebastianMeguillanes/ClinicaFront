@@ -7,29 +7,23 @@
 
       <div class="form-group">
         <label for="id_paciente">Paciente:</label>
-        <input type="text" id="id_paciente" name="apellido_doctor" [(ngModel)]="histClinicaData.datos.id_paciente" class="form-control" required>
+        <input type="text" id="id_paciente" name="id_paciente" [(ngModel)]="histClinicaData.datos.id_paciente" class="form-control" required>
       </div>
 
       <div class="form-group">
-        <label for="nombre_doctor">Doctor:</label>
-        <input type="text" id="id_doctor" name="nombre_doctor" [(ngModel)]="histClinicaData.datos.id_doctor" class="form-control" required>
-      </div>
-
-      <!-- <div class="form-group">
-        <label for="radiografias">Radiografía:</label>
-        <input type="text" id="radiografias" name="radiografias" [(ngModel)]="histClinicaData[0].radiografias" class="form-control" required>
-      </div> -->
-
-      <div class="form-group">
-        <label for="examen_clinico">Examen Clinico:</label>
-        <input type="text" id="examen_clinico" name="examen_clinico" [(ngModel)]="histClinicaData.datos.examen_clinico" class="form-control" required>
+        <label for="id_doctor" class="form-label">Doctor:</label>
+        <select id="id_doctor" name="id_doctor" [(ngModel)]="histClinicaData.datos.id_doctor" class="form-select">
+          <option *ngFor="let doctor of doctores" [value]="doctor.id_doctor">{{ doctor.nombre }}</option>
+        </select>
       </div>
 
       <div class="form-group">
-        <label for="id_tratamiento">Tratamiento:</label>
-        <input type="text" id="id_tratamiento" name="tipo_tratamiento" [(ngModel)]="histClinicaData.datos.id_tratamiento" class="form-control" required>
+        <label for="id_tratamiento" class="form-label">Tratamiento:</label>
+        <select id="id_tratamiento" name="id_tratamiento" [(ngModel)]="histClinicaData.datos.id_tratamiento" class="form-select">
+          <option *ngFor="let tratamiento of tratamientos" [value]="tratamiento.id_tratamiento">{{ tratamiento.tipo }}</option>
+        </select>
       </div>
-      
+
       <div class="form-group">
         <label for="medicaciones">Medicaciones:</label>
         <input type="text" id="medicaciones" name="medicaciones" [(ngModel)]="histClinicaData.datos.medicaciones" class="form-control" required>
@@ -47,11 +41,16 @@
     </div>
 
     <!-- Columna derecha -->
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <div class="form-group">
         <label for="tipo_tratamiento">Documento de Identidad:</label>
         <input type="text" id="tipo_tratamiento" name="tipo_tratamiento" [(ngModel)]="histClinicaData.datos.tipo_tratamiento" class="form-control" required>
       </div>
+    </div> -->
+
+    <div class="form-group">
+      <label for="examen_clinico">Examen Clinico:</label>
+      <input type="text" id="examen_clinico" name="examen_clinico" [(ngModel)]="histClinicaData.datos.examen_clinico" class="form-control" required>
     </div>
     <!-- Columna para botones -->
     <div class="col-md-12 mt-3">

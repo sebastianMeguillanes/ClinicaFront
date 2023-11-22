@@ -3,19 +3,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HistClinicaService } from '../histClinica.service';
 import { DoctorService } from '../../doctor/doctor.service';
 import { TratamientoService } from '../../tratamiento/tratamiento.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss'],
 })
+
 export class CreateComponent implements OnInit {
   tratamientos: any[] = [];
   doctores: any[] = [];
   selectedImage: File | undefined;
+
   histClinicaData: any = {
     id_paciente: '',
-    radiografias: '',
+    imagenes: '',
     tipo: '',
     nombre_doctor: '',
     fecha_registro: '',
@@ -27,6 +30,7 @@ export class CreateComponent implements OnInit {
   idPaciente: string = '';
 
   constructor(
+    private http: HttpClient,
     private histClinicaService: HistClinicaService,
     private router: Router,
     private route: ActivatedRoute, // Agregamos ActivatedRoute aquí
@@ -39,12 +43,35 @@ export class CreateComponent implements OnInit {
       // params contiene todos los parámetros de la ruta
       // params['id'] contiene el valor del parámetro 'id'
       const id = +params['id']; // Convierte el valor a un número si es necesario
-      window.alert(id);
+      //window.alert(id);
   
      
     });
     this.getDoctores();
     this.getTratamientos();
+  }
+
+  onFileSelected(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
+
+  onSubmit() {
+    
+    if (this.selectedImage) {
+      this.uploadFile(this.selectedImage);
+    }
+    // Asignamos el valor del parámetro 'id_paciente' al objeto histClinicaData
+    //this.histClinicaData.datos.id_paciente = this.idPaciente;
+    // Llamar al servicio para crear un historial clínico con this.histClinicaData
+    this.histClinicaService.createHistClinica(this.histClinicaData).subscribe((response: any) => {
+      // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
+      window.history.back();
+    });
+  }
+
+  uploadFile(file: File) {
+    const formData = new FormData();
+    formData.append('imagen', file);
   }
 
   getDoctores() {
@@ -59,20 +86,7 @@ export class CreateComponent implements OnInit {
     });
   }
 
-  onFileSelected(event: any): void {
-    this.selectedImage = event.target.files[0];
-  }
 
-  onSubmit() {
-    // Asignamos el valor del parámetro 'id_paciente' al objeto histClinicaData
-    this.histClinicaData.id_paciente = this.idPaciente;
-
-    // Llamar al servicio para crear un historial clínico con this.histClinicaData
-    this.histClinicaService.createHistClinica(this.histClinicaData).subscribe((response: any) => {
-      // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
-      window.history.back();
-    });
-  }
 
   goBack() {
     // Navegar a la página anterior en el historial del navegador
