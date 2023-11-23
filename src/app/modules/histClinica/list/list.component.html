@@ -4,24 +4,18 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Radiografia</th>
-        <th>Tratamiento</th>
         <th>Nombre Doctor</th>
         <th>Apellido Doctor</th>
-        <th>Fecha de Registro</th>
-        <th>Medicaciones</th>
+        <th>Tratamiento</th>
         <th>Estado de Historial Clinica</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let histClinica of histClinicas">
-        <td>{{ histClinica.radiografias }}</td>
-          <td>{{ histClinica.tipo }}</td>
           <td>{{ histClinica.nombre }}</td>
           <td>{{ histClinica.apellido }}</td>
-          <td>{{ histClinica.fecha_registro }}</td>
-          <td>{{ histClinica.medicaciones}}</td>
+          <td>{{ histClinica.tipo }}</td>
           <td>{{ histClinica.estado_historial }}</td>
         <td>
           <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>

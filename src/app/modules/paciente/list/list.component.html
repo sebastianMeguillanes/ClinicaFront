@@ -15,6 +15,7 @@
         <th>Apellido</th>
         <th>Nacimiento</th>
         <th>Acciones</th>
+        <th>Estado</th>
       </tr>
     </thead>
     <tbody>
@@ -24,9 +25,11 @@
           <td>{{ paciente.nombre }}</td>
           <td>{{ paciente.apellido }}</td>
           <td>{{ paciente.fecha_nacimiento }}</td>
+          
           <td>
             <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/paciente/delete']" class="btn btn-danger">Eliminar</a>
+            <a [routerLink]="['/paciente/delete', paciente.id_paciente]" class="btn btn-danger">Eliminar</a>
+            
             <a [routerLink]="['../../histClinica/list', paciente.id_paciente]" class="btn btn-primary">Historial Clínico</a>
           </td>
         </tr>

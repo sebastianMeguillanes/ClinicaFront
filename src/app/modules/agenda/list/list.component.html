@@ -1,35 +1,56 @@
 <app-navbar></app-navbar>
-<div class="container">
-  <h2>Agenda</h2>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Nombre Paciente</th>
-        <th>Carnet del Paciente</th>
-        <th>Fecha y hora de la cita</th>
-        <th>Descripción</th>
-        <th>Nombre del Doctor</th>
-        <th>Estado Agenda</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container *ngFor="let agenda of agendas | slice: (p-1) * itemsPerPage : (p-1) * itemsPerPage + itemsPerPage">
+<div >
+  
+  <div id="borde">
+    <h3>Agenda</h3>
+    <input type="text" class="campo-busqueda" placeholder="Buscar...">
+    <div class="icono-lupa">&#128269;</div>
+    <table class="table table-striped">
+      <thead class="table-dark">
         <tr>
-          <td>{{ agenda.nombre_paciente }}</td>
-          <td>{{ agenda.ci }}</td>
-          <td>{{ agenda.fecha_hora }}</td>
-          <td>{{ agenda.descripcion }}</td>
-          <td>{{ agenda.nombre }}</td>
-          <td>{{ agenda.estado_agenda }}</td>
-          <td>
-            <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a>
-          </td>
+          <th>Nombre Paciente</th>
+          <th>Fecha y hora de la cita</th>
+          <th>Descripción</th>
+          <th>Estado Agenda</th>
+          <th>Acciones</th>
         </tr>
-      </ng-container>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let agenda of agendas | slice: (p-1) * itemsPerPage : (p-1) * itemsPerPage + itemsPerPage">
+          <tr>
+            <td>{{ agenda.nombre_paciente }}</td>
+            <td>{{ agenda.fecha_hora }}</td>
+            <td>{{ agenda.descripcion }}</td>
+            <td>{{ agenda.estado_agenda }}</td>
+            <td>
+  <!--             
+              <style>
+                .custom-outline-danger {
+                  border-color: #ff0000; /* Rojo en formato hexadecimal */
+                }
+                .custom-outline-dark {
+                  border-color: #000000; /* Negro en formato hexadecimal */
+                }
+              </style> -->
+              
+              <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-outline-info custom-outline-dark">
+                <i class="bi bi-info-lg"></i>
+              </button>
+              
+              <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-outline-danger custom-outline-danger">
+                <i class="bi bi-search"></i>
+              </button>
+              
+                          
+              <!-- <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a> -->
+              <!-- <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-danger">Danger</button>
+              <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a> -->
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
 
   <div class="my-3 text-left">
     <button [routerLink]="['/agenda/create']" class="btn btn-success">Crear Nueva Cita</button>

@@ -1,11 +1,96 @@
 
 // body {
-//   font-family: 'Arial', sans-serif;
+// 	margin: 0;
+// 	padding: 0;
+// 	background: black;
 // }
 
 // .container {
-//   margin: 2%;
+// 	position: absolute;
+// 	left: 48%;
+// 	top: 45%;
+// 	transform: translate(-50%,-50%);
+// 	padding: 10px;
 // }
+
+// input {
+// 	outline: none;
+// 	box-sizing: border-box;
+// 	height: 60px;
+// 	width: 0px;
+// 	padding: 0 20px;
+// 	color: #000;
+// 	border-radius: 50px;
+// 	font-size: 20px;
+// 	border: 1px solid #D50000;
+// 	transition: all .7s ease;
+// }
+
+// ::placeholder {
+// 	color: grey;
+// }
+
+// .btn {
+// 	position: absolute;
+// 	right: 0px;
+// 	top: 0px;
+// 	width: 80px;
+// 	height: 80px;
+// 	background: #D50000;
+// 	line-height: 80px;
+// 	border-radius: 50%;
+// 	text-align: center;
+// 	cursor: pointer;
+// 	transition: .5s;
+// }
+
+// .btn i {
+// 	font-size: 25px;
+// 	color: white;
+// 	line-height: 80px;
+// 	transition: all .7s ease;
+// }
+
+// .container:hover input {
+// 	width: 350px;
+// }
+
+// .container:hover i{
+// 	transform: rotate(-360deg);
+// }
+
+// .btn:hover{
+// 	background: #cc0000;
+// }
+
+// body {
+//   font-family: 'Arial', sans-serif;
+// }
+
+// table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin-bottom: 20px;
+// }
+// table, th, td {
+//     border: 1px solid black;
+// }
+// th, td {
+//     padding: 10px;
+//     text-align: left;
+// }
+// input {
+//     width: 100%;
+//     padding: 8px;
+// }
+
+#borde {
+    //height: 200px;
+    padding-top: 20px;
+    background-color: #f0f0f0;
+   
+    
+}
 
 // h2 {
 //   color: #333;
@@ -33,9 +118,19 @@
 //   }
 // }
 
-//   .btn {
-//     margin-right: 0%;
-//   }
+    .custom-outline-danger {
+        border-color: #ff0000; /* Rojo en formato hexadecimal */
+    }
+    .custom-outline-dark {
+        border-color: #87CEEB; /* Negro en formato hexadecimal */
+    }
+  .btn {
+   
+    margin-right: 10px;
+    &:focus {
+      outline: none; /* Añade esto para el estado de enfoque */
+    }
+  }
 
 
 // .btn {
