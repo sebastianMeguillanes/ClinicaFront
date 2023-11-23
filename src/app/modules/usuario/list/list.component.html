@@ -4,10 +4,9 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Nombre</th>
           <th>Usuario</th>
           <th>contraseña</th>
-          <th>Direccion Correo Electronico</th>
+
           <th>Permisos</th>
           <th>Acciones</th>
         </tr>
@@ -15,10 +14,8 @@
       <tbody>
         <ng-container *ngFor="let usuario of getCurrentPageItems(); let i = index">
           <tr>
-            <td>{{ usuario.nombre }}</td>
             <td>{{ usuario.usuario }}</td>
-            <td>{{ usuario.contrasena }}</td>
-            <td>{{ usuario.direccion_correo_electronico }}</td>
+            <td>{{ usuario.contrasena?.substring(0, 0) + '******' }}</td>
             <td>{{ usuario.permisos_rol }}</td>
             <td>
               <a [routerLink]="['/usuario/edit', usuario.id_usuario]" class="btn btn-primary">Detalles</a>
