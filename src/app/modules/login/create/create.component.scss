@@ -1,13 +1,16 @@
 body {
   font-family: 'Medium Italic', sans-serif;
-  margin: 0;
+  
 }
 
 .container {
   display: flex;
-
-  height: 70vh;
-  width: 70%;
+  height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
+  width: 300vh;
+  background-image: url('../../../../assets/prueba.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -16,10 +19,18 @@ h1 {
 }
 
 form {
-  background-color: #159f98;
+  margin-top: 20vh; /* Aumenta el espacio en la parte superior del formulario */
+  margin-left: 35vh;
+  height: 50vh; /* Ajusta la altura al 100% de la altura de la ventana */
+  width: 60vh;
+  background-position: center;
+  background-color: rgba(21, 159, 152, 0.3);
   font-family: 'Medium Italic', sans-serif;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .form-group {
     margin-bottom: 20px;
@@ -36,7 +47,7 @@ form {
       border: 1px solid #ddd;
       border-radius: 5px;
       box-sizing: border-box;
-      margin-left: 40%;
+      margin-left: -10%;
     }
   }
 
@@ -45,8 +56,9 @@ form {
     background-color: #002d2b;
     font-size: 1.4em;
     padding: 5px;
-    width: 40%; 
+    width: 40%;
     margin-top: 2%;
     margin-left: 28%;
-}
+  }
+
 }
