@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <div class="container">
   <h2>Historial Clínico</h2>
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-striped">
+    <thead class="table-dark">
       <tr>
         <th>Nombre Doctor</th>
         <th>Apellido Doctor</th>
@@ -18,9 +18,25 @@
           <td>{{ histClinica.tipo }}</td>
           <td>{{ histClinica.estado_historial }}</td>
         <td>
-          <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
-          <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a>
-          <a [href]="'https://clinicaback.dev.404.codes/api/v1/histClinica/radiografia/' + histClinica.radiografias" class="btn btn-primary">Radiografia</a>
+          <!-- <a [routerLink]="['/histClinica/edit', histClinica.id_historial]" class="btn btn-primary">Detalles</a>
+          <a [routerLink]="['/histClinica/delete']" class="btn btn-danger">Eliminar</a> -->
+          <!-- <a [href]="'https://clinicaback.dev.404.codes/api/v1/histClinica/radiografia/' + histClinica.id_historial" class="btn btn-primary">Radiografia</a>
+           -->
+          <button [routerLink]="['/histClinica/edit', histClinica.id_historial]"  type="button" class="btn btn-outline-dark  custom-outline-dark">
+            <i class="bi bi-images"></i>
+          </button>
+          
+          <button [routerLink]="['/histClinica/edit', histClinica.id_historial]"  type="button" class="btn btn-outline-info custom-outline-blue">
+            <i class="bi bi-info-lg"></i>
+          </button>
+          
+          <button [routerLink]="['/histClinica/delete']" type="button" class="btn btn-outline-danger custom-outline-danger">
+            <i class="bi bi-trash3-fill"></i>
+          </button>
+
+
+
+          
         </td>
       </tr>
     </tbody>

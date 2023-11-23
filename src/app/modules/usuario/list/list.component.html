@@ -1,28 +1,36 @@
 <app-navbar></app-navbar>
 <div class="container">
     <h2>Usuarios</h2>
-    <table class="table table-bordered">
-      <thead>
+    <table class="table table-striped">
+      <thead class="table-dark">
         <tr>
-          <th>Nombre</th>
+          
           <th>Usuario</th>
           <th>contraseña</th>
-          <th>Direccion Correo Electronico</th>
-          <th>Permisos</th>
+          <th>Correo Electronico</th>
           <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
         <ng-container *ngFor="let usuario of getCurrentPageItems(); let i = index">
           <tr>
-            <td>{{ usuario.nombre }}</td>
+            
             <td>{{ usuario.usuario }}</td>
             <td>{{ usuario.contrasena }}</td>
             <td>{{ usuario.direccion_correo_electronico }}</td>
-            <td>{{ usuario.permisos_rol }}</td>
             <td>
-              <a [routerLink]="['/usuario/edit', usuario.id_usuario]" class="btn btn-primary">Detalles</a>
+              <!-- <a [routerLink]="['/usuario/edit', usuario.id_usuario]" class="btn btn-primary">Detalles</a>
               <a [routerLink]="['/usuario/delete']" class="btn btn-danger">Eliminar</a>
+             -->
+
+             <button [routerLink]="['/usuario/edit', usuario.id_usuario]" type="button" class="btn btn-outline-info custom-outline-dark">
+              <i class="bi bi-info-lg"></i>
+            </button>
+            
+            <button [routerLink]="['/usuario/delete']" type="button" class="btn btn-outline-danger custom-outline-danger">
+              <i class="bi bi-trash3-fill"></i>
+            </button>
+
             </td>
           </tr>
         </ng-container>

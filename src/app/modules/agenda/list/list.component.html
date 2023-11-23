@@ -1,10 +1,9 @@
 <app-navbar></app-navbar>
 <div >
-  
-  <div id="borde">
-    <h3>Agenda</h3>
-    <input type="text" class="campo-busqueda" placeholder="Buscar...">
-    <div class="icono-lupa">&#128269;</div>
+  <h3>Agenda</h3>
+  <div>
+    <!-- <input type="text" class="campo-busqueda" placeholder="Buscar...">
+    <div class="icono-lupa">&#128269;</div> -->
     <table class="table table-striped">
       <thead class="table-dark">
         <tr>
@@ -38,7 +37,7 @@
               </button>
               
               <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-outline-danger custom-outline-danger">
-                <i class="bi bi-search"></i>
+                <i class="bi bi-trash3-fill"></i>
               </button>
               
                           

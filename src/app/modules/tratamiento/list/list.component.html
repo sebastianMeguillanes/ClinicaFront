@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <div class="container">
   <h2>Tratamientos</h2>
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-striped">
+    <thead class="table-dark">
       <tr>
         <th>Tipo</th>
         <th>Cantidad de Sesiones</th>
@@ -15,8 +15,16 @@
           <td>{{ tratamiento.tipo }}</td>
           <td>{{ tratamiento.cantidad_sesion }}</td>
           <td>
-            <a [routerLink]="['/tratamiento/edit', tratamiento.id_tratamiento]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/tratamiento/delete']" class="btn btn-danger">Eliminar</a>
+            <!-- <a [routerLink]="['/tratamiento/edit', tratamiento.id_tratamiento]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/tratamiento/delete']" class="btn btn-danger">Eliminar</a> -->
+            <button [routerLink]="['/tratamiento/edit', tratamiento.id_tratamiento]" type="button" class="btn btn-outline-info custom-outline-dark">
+              <i class="bi bi-info-lg"></i>
+            </button>
+            
+            <button [routerLink]="['/tratamiento/delete']" type="button" class="btn btn-outline-danger custom-outline-danger">
+              <i class="bi bi-trash3-fill"></i>
+            </button>
+            
           </td>
         </tr>
       </ng-container>

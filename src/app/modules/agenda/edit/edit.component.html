@@ -24,30 +24,31 @@
         <label for="descripcion">descripcion:</label>
         <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData[0].descripcion" class="form-control" required>
       </div>
-    </div>
 
-    <!-- Columna derecha -->
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="documento_identidad">Documento de Identidad:</label>
-        <input type="text" id="documento_identidad" name="documento_identidad" [(ngModel)]="agendaData[0].documento_identidad" class="form-control" required>
-      </div>
+      <!-- <div class="form-group">
+        <label for="estado_agenda">Estado de Agenda:</label>
+        <input type="text" id="estado_agenda" name="estado_agenda" [(ngModel)]="agendaData[0].descripcion" class="form-control" required>
+      </div> -->
 
       <div class="form-group">
-        <label for="sexo">Sexo:</label>
-        <select id="sexo" name="sexo" [(ngModel)]="agendaData[0].sexo" class="form-control" required>
-          <option value="M">Masculino</option>
-          <option value="F">Femenino</option>
-          <option value="O">Otro</option>
+        <label for="id_doctor" class="form-label">Doctor:</label>
+        <select id="id_doctor" name="id_doctor" [(ngModel)]="agendaData[0].id_doctor" class="form-select">
+          <option *ngFor="let doctor of doctores" [value]="doctor.id_doctor">{{ doctor.nombre }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="agendaData[0].fecha_nacimiento" class="form-control" required>
+        <label for="estado_agenda">Estado de Agenda:</label>
+        <select id="estado_agenda" name="estado_agenda" [(ngModel)]="agendaData[0].estado_agenda" class="form-control" required>
+          <option value="Cancelada">Cancelada</option>
+          <option value="Completada">Completada</option>
+          <option value="Postergada">Postergada</option>
+        </select>
       </div>
+
     </div>
 
+    
     <!-- Columna para botones -->
     <div class="col-md-12 mt-3">
       <button type="submit" class="btn btn-primary">Guardar Cambios</button>

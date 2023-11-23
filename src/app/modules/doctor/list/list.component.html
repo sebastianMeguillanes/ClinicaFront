@@ -2,8 +2,8 @@
 <div class="container">
   <h2>Lista de Doctores</h2>
 
-  <table class="table table-bordered">
-    <thead>
+  <table class="table table-striped">
+    <thead class="table-dark">
       <tr>
         <th>CI</th>
         <th>Nombre</th>
@@ -20,8 +20,16 @@
           <td>{{ doctor.apellido }}</td>
           <td>{{ doctor.fecha_nacimiento }}</td>
           <td>
-            <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a>
+            <!-- <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a> -->
+
+            <button [routerLink]="['/doctor/edit', doctor.id_doctor]" type="button" class="btn btn-outline-info custom-outline-dark">
+              <i class="bi bi-info-lg"></i>
+            </button>
+            
+            <button [routerLink]="['/doctor/delete']" type="button" class="btn btn-outline-danger custom-outline-danger">
+              <i class="bi bi-trash3-fill"></i>
+            </button>
 
           </td>
         </tr>
