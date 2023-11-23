@@ -6,7 +6,7 @@ body {
 #principal {
   display: flex;
    height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
-   width: 214vh;
+   width: 200vh;
    background-image: url('../../../../assets/prueba.jpg');
    background-size: cover;
    background-position: center;
@@ -20,8 +20,8 @@ h1 {
 }
 
 form {
-  margin-top: 20vh; /* Aumenta el espacio en la parte superior del formulario */
-  margin-left: 35vh;
+  margin-top: 25vh; /* Aumenta el espacio en la parte superior del formulario */
+  margin-left: 70vh;
   height: 50vh; /* Ajusta la altura al 100% de la altura de la ventana */
   width: 60vh;
   background-position: center;
@@ -35,7 +35,6 @@ form {
 
   .form-group {
     margin-bottom: 20px;
-
     img {
       display: block;
       margin: 0 auto;
