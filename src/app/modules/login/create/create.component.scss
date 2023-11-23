@@ -3,15 +3,16 @@ body {
   
 }
 
-.container {
-  display: flex;
-  height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
-  width: 300vh;
-  background-image: url('../../../../assets/prueba.jpg');
-  background-size: cover;
-  background-position: center;
-  overflow-x: hidden;
-}
+#principal {
+   //display: flex;
+   height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
+   width: 215vh;
+   background-image: url('../../../../assets/prueba3.jpg');
+   background-size: cover;
+   background-position: center center;
+   overflow-x: hidden;
+ }
+ 
 
 h1 {
   color: #333;
