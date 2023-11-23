@@ -23,7 +23,6 @@ export class CreateComponent {
       this.router.navigate(['/tratamiento/list']); // Redirigir a la lista de pacientes
     });
   }
-
   goBack() {
     this.router.navigate(['/tratamiento/list']); // Volver atrás sin guardar cambios
   }

@@ -1,11 +1,12 @@
 body {
   font-family: 'Medium Italic', sans-serif;
+  margin: 0;
 }
 
 #principal {
   display: flex;
   height: 100vh;
-  width: 200vh;
+  width: 100vw;
   background-image: url('../../../../assets/prueba.jpg');
   background-size: cover;
   background-position: center;
@@ -18,15 +19,14 @@ h1 {
 }
 
 form {
-  margin-top: 25vh;
-  margin-left: 70vh;
+  margin: auto;
   height: 50vh;
   width: 60vh;
   background-position: center;
   background-color: rgba(11, 155, 148, 0.3);
   font-family: 'Medium Italic', sans-serif;
   padding: 0;
-  border-radius: 0;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
