@@ -27,7 +27,6 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    window.alert("DS")
     const pacienteId = this.route.snapshot.params['id'];
 
     this.pacienteService.getPacienteById(pacienteId).subscribe((response: any) => {

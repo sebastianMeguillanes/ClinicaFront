@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="container">
   <h2>Lista de Doctores</h2>
-
+  
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -21,8 +21,7 @@
           <td>{{ doctor.fecha_nacimiento }}</td>
           <td>
             <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a>
-
+            <a [routerLink]="['/doctor/delete', doctor.id_doctor]" class="btn btn-danger">Eliminar</a>
           </td>
         </tr>
       </ng-container>
@@ -31,7 +30,7 @@
 
   <div class="text-center">
     <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
-
+    
     <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
 
     <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>

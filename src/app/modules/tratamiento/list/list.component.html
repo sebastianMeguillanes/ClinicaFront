@@ -16,7 +16,7 @@
           <td>{{ tratamiento.cantidad_sesion }}</td>
           <td>
             <a [routerLink]="['/tratamiento/edit', tratamiento.id_tratamiento]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/tratamiento/delete']" class="btn btn-danger">Eliminar</a>
+            <a [routerLink]="['/tratamiento/delete', tratamiento.id_tratamiento]" class="btn btn-danger">Eliminar</a>
           </td>
         </tr>
       </ng-container>

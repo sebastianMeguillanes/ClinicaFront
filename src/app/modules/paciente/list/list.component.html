@@ -25,6 +25,7 @@
           <td>{{ paciente.nombre }}</td>
           <td>{{ paciente.apellido }}</td>
           <td>{{ paciente.fecha_nacimiento }}</td>
+          <td>{{ paciente.estado }}</td>
           
           <td>
             <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
