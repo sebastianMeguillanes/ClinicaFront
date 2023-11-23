@@ -1,16 +1,9 @@
 <app-navbar></app-navbar>
 <div class="container">
   <h2>Lista de Doctores</h2>
-<<<<<<< HEAD
-
   <table class="table table-striped">
     <thead class="table-dark">
-=======
-  
-  <table class="table table-bordered">
-    <thead>
->>>>>>> 908a100193ff4c1ac86cb2150d3c10ec6bb38edf
-      <tr>
+       <tr>
         <th>CI</th>
         <th>Nombre</th>
         <th>Apellido</th>
@@ -26,7 +19,7 @@
           <td>{{ doctor.apellido }}</td>
           <td>{{ doctor.fecha_nacimiento }}</td>
           <td>
-<<<<<<< HEAD
+
             <!-- <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
             <a [routerLink]="['/doctor/delete']" class="btn btn-danger">Eliminar</a> -->
 
@@ -37,11 +30,9 @@
             <button [routerLink]="['/doctor/delete']" type="button" class="btn btn-outline-danger custom-outline-danger">
               <i class="bi bi-trash3-fill"></i>
             </button>
+            <!-- <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
+            <a [routerLink]="['/doctor/delete', doctor.id_doctor]" class="btn btn-danger">Eliminar</a> -->
 
-=======
-            <a [routerLink]="['/doctor/edit', doctor.id_doctor]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/doctor/delete', doctor.id_doctor]" class="btn btn-danger">Eliminar</a>
->>>>>>> 908a100193ff4c1ac86cb2150d3c10ec6bb38edf
           </td>
         </tr>
       </ng-container>
