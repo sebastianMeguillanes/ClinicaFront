@@ -4,16 +4,6 @@ body {
 
 #principal {
   display: flex;
-<<<<<<< HEAD
-   height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
-   width: 214vh;
-   background-image: url('../../../../assets/consultorio.jpg');
-   background-size: cover;
-   background-position: center;
-   overflow-x: hidden;
- }
- 
-=======
   height: 100vh;
   width: 200vh;
   background-image: url('../../../../assets/prueba.jpg');
@@ -21,7 +11,6 @@ body {
   background-position: center;
 
 }
->>>>>>> b109b135683f2468b7a1c04115ac0335cbdef1d8
 
 h1 {
   color: #333;
@@ -69,7 +58,7 @@ form {
       }
     }
   }
-  
+
   .btn-primary {
     color: #fff;
     background-color: #002d2b;
