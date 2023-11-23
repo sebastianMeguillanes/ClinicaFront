@@ -1,15 +1,15 @@
 body {
   font-family: 'Medium Italic', sans-serif;
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
 }
 
 #principal {
   display: flex;
   height: 100vh;
-  width: 200vh;
+  width: 100vw; /* Cambia a 100vw para cubrir el 100% del ancho de la pantalla */
   background-image: url('../../../../assets/prueba.jpg');
   background-size: cover;
   background-position: center;
-
 }
 
 h1 {
@@ -18,22 +18,21 @@ h1 {
 }
 
 form {
-  margin-top: 25vh;
-  margin-left: 70vh;
+  margin: auto; /* Centra el formulario vertical y horizontalmente */
   height: 50vh;
   width: 60vh;
-  background-position: center;
   background-color: rgba(11, 155, 148, 0.3);
   font-family: 'Medium Italic', sans-serif;
   padding: 0;
-  border-radius: 0;
+  border-radius: 5px; /* Agrega un pequeño borde redondeado */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   .form-group {
     margin-bottom: 20px;
-    margin-right: -85px;
+
     .input-with-icon {
       position: relative;
 
@@ -44,16 +43,16 @@ form {
         border: 1px solid #ddd;
         border-radius: 5px;
         box-sizing: border-box;
-        margin-left: -50px;
         font-family: 'Medium Italic', sans-serif;
       }
+
       .bi-person-fill,
       .bi-lock-fill {
         position: absolute;
-        top: 48%;
-        left: -49px;
-        transform: translateY(-48%);
-        font-size: 30px;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 20px;
         color: #333;
       }
     }
@@ -66,7 +65,5 @@ form {
     padding: 5px;
     width: 40%;
     margin-top: 2%;
-    margin-left: 28%;
   }
 }
-

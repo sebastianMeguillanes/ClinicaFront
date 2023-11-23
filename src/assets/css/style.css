@@ -373,7 +373,7 @@ h6 {
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
   padding-left: 20px;
-  /* Toggle Sidebar Button */
+  /* Toggle Sidebar Button
   /* Search Bar */
 }
 
@@ -592,10 +592,10 @@ h6 {
   top: 60px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 250px;
   z-index: 996;
   transition: all 0.3s;
-  padding: 20px;
+  padding: 10px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #aab7cf transparent;
@@ -603,7 +603,7 @@ h6 {
   background-color: #fff;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1500px) {
   .sidebar {
     left: -300px;
   }
@@ -619,11 +619,10 @@ h6 {
   background-color: #aab7cf;
 }
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1500px) {
   #main,
   #footer {
-    margin-left: 300px;
+    margin-left: 0px;
   }
 }
 
@@ -633,8 +632,7 @@ h6 {
   }
 }
 
-@media (min-width: 1200px) {
-
+@media (min-width: 1300px) {
   .toggle-sidebar #main,
   .toggle-sidebar #footer {
     margin-left: 0;
@@ -642,6 +640,13 @@ h6 {
 
   .toggle-sidebar .sidebar {
     left: -300px;
+  }
+}
+
+/* Nuevo media query para manejar zoom mayor al 100% */
+@media (min-width: 1500px) and (zoom: 1.25) {
+  .toggle-sidebar .sidebar {
+    left: 0;
   }
 }
 

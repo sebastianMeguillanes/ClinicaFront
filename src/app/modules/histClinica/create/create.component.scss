@@ -1,71 +1,71 @@
-// Estilos generales
-body {
-  font-family: 'Arial', sans-serif;
-}
+// // Estilos generales
+// body {
+//   font-family: 'Arial', sans-serif;
+// }
 
-.container {
-  margin: 5%; 
-  margin-left: 30%;
-}
+// .container {
+//   margin: 5%;
+//   margin-left: 30%;
+// }
 
-h1 {
-  color: #333;
-  text-align: center; 
-}
+// h1 {
+//   color: #333;
+//   text-align: center;
+// }
 
-form {
-  margin-top: 2%; 
+// form {
+//   margin-top: 2%;
 
-  .form-group {
-    margin-bottom: 2%; 
+//   .form-group {
+//     margin-bottom: 2%;
 
-    label {
-      display: block;
-      margin-bottom: 0.5em; 
-      color: #333;
-      font-size: 1.1em; 
-      font-weight: bold;
-    }
+//     label {
+//       display: block;
+//       margin-bottom: 0.5em;
+//       color: #333;
+//       font-size: 1.1em;
+//       font-weight: bold;
+//     }
 
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 0.5em; 
-      font-size: 0.9em; 
-      border: 1px solid #ddd;
-      border-radius: 0.4em; 
-      box-sizing: border-box;
-    }
+//     input,
+//     select,
+//     textarea {
+//       width: 100%;
+//       padding: 0.5em;
+//       font-size: 0.9em;
+//       border: 1px solid #ddd;
+//       border-radius: 0.4em;
+//       box-sizing: border-box;
+//     }
 
-    input[type="date"] {
-      padding: 0.5em 0;
-    }
-  }
+//     input[type="date"] {
+//       padding: 0.5em 0;
+//     }
+//   }
 
-  .btn {
-    margin-right: 0.5em; 
-  }
+//   .btn {
+//     margin-right: 0.5em;
+//   }
 
-  .btn-primary {
-    color: #fff;
-    background-color: #3498db;
-    font-size: 1em; 
+//   .btn-primary {
+//     color: #fff;
+//     background-color: #3498db;
+//     font-size: 1em;
 
-    &:hover {
-      background-color: #2980b9;
-    }
-  }
+//     &:hover {
+//       background-color: #2980b9;
+//     }
+//   }
 
-  .btn-secondary {
-    margin-bottom: 0.9em;
-    color: #333;
-    background-color: #ddd;
-    font-size: 1em; 
+//   .btn-secondary {
+//     margin-bottom: 0.9em;
+//     color: #333;
+//     background-color: #ddd;
+//     font-size: 1em;
 
-    &:hover {
-      background-color: #ccc;
-    }
-  }
-}
+//     &:hover {
+//       background-color: #ccc;
+//     }
+//   }
+// }
 
