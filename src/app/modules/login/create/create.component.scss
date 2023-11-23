@@ -1,18 +1,16 @@
 body {
   font-family: 'Medium Italic', sans-serif;
-  
 }
 
 #principal {
   display: flex;
-   height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
-   width: 200vh;
-   background-image: url('../../../../assets/prueba.jpg');
-   background-size: cover;
-   background-position: center;
-   overflow-x: hidden;
- }
- 
+  height: 100vh;
+  width: 200vh;
+  background-image: url('../../../../assets/prueba.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
 
 h1 {
   color: #333;
@@ -20,12 +18,12 @@ h1 {
 }
 
 form {
-  margin-top: 25vh; /* Aumenta el espacio en la parte superior del formulario */
+  margin-top: 25vh;
   margin-left: 70vh;
-  height: 50vh; /* Ajusta la altura al 100% de la altura de la ventana */
+  height: 50vh;
   width: 60vh;
   background-position: center;
-  background-color: rgba(21, 159, 152, 0.3);
+  background-color: rgba(11, 155, 148, 0.3);
   font-family: 'Medium Italic', sans-serif;
   padding: 0;
   border-radius: 0;
@@ -35,22 +33,32 @@ form {
 
   .form-group {
     margin-bottom: 20px;
-    img {
-      display: block;
-      margin: 0 auto;
-    }
+    margin-right: -85px;
+    .input-with-icon {
+      position: relative;
 
-    input {
-      width: 120%;
-      padding: 8px;
-      font-size: 1.3em;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-sizing: border-box;
-      margin-left: -10%;
+      input {
+        width: 100%;
+        padding: 8px 8px 8px 30px;
+        font-size: 1.3em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-left: -50px;
+        font-family: 'Medium Italic', sans-serif;
+      }
+      .bi-person-fill,
+      .bi-lock-fill {
+        position: absolute;
+        top: 48%;
+        left: -49px;
+        transform: translateY(-48%);
+        font-size: 30px;
+        color: #333;
+      }
     }
   }
-
+  
   .btn-primary {
     color: #fff;
     background-color: #002d2b;
@@ -60,5 +68,5 @@ form {
     margin-top: 2%;
     margin-left: 28%;
   }
-
 }
+

@@ -1,21 +1,28 @@
-  <div id="principal">
-    <form (submit)="onSubmit()" class="row">
+<div id="principal">
+  <form (submit)="onSubmit()" class="row">
+    <div class="form-group">
+      <img src="../../assets/Clinica1.png">
+    </div>
+
+    <div class="col-md-6">
       <div class="form-group">
-        <img src="../../assets/Clinica1.png">
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <input type="text" id="usuario" name="usuario" [(ngModel)]="loginData.usuario" class="form-control" required placeholder="Usuario..">
-        </div>
-        <div class="form-group">
-          <input type="password" id="contrasena" name="contrasena" [(ngModel)]="loginData.contrasena" class="form-control" required placeholder="Contraseña..">
+        <div class="input-with-icon">
+          <input type="text" id="usuario" name="usuario" [(ngModel)]="loginData.usuario" class="form-control" required placeholder="Usuario.." >
+          <i class="bi bi-person-fill"></i>
         </div>
       </div>
-      <!-- Columna para botones -->
-      <div class="col-md-12 mt-3">
-        <button type="submit" class="btn btn-primary">Entrar</button>
+      
+      <div class="form-group">
+        <div class="input-with-icon">
+        <input type="password" id="contrasena" name="contrasena" [(ngModel)]="loginData.contrasena" class="form-control" required placeholder="Contraseña..">
+        <i class="bi bi-lock-fill"></i>
       </div>
-  
-    </form>
+    </div>
   </div>
-  
+
+    <!-- Columna para botones -->
+    <div class="col-md-12 mt-3">
+      <button type="submit" class="btn btn-primary">Entrar</button>
+    </div>
+  </form>
+</div>
