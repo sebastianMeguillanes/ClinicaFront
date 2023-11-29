@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListComponent implements OnInit {
   currentPage: number = 1;
-  itemsPerPage: number = 5;
+  itemsPerPage: number = 10;
   pages: number[] = [];
   totalPages: number = 0;
   histClinicas: any[] = [];

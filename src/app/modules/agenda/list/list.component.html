@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <ng-container *ngFor="let agenda of agendas | slice: (p-1) * itemsPerPage : (p-1) * itemsPerPage + itemsPerPage">
+        <ng-container *ngFor="let agenda of getCurrentPageItems(); let i = index">
           <tr>
             <td>{{ agenda.nombre_paciente }}</td>
             <td>{{ agenda.fecha_hora }}</td>
@@ -34,13 +34,14 @@
         </ng-container>
       </tbody>
     </table>
-  </div>
-
-  <div class="my-3 text-left">
-    <button [routerLink]="['/agenda/create']" class="btn btn-success">Crear Nueva Cita</button>
-  </div>
-
+    
   <div class="text-center">
-    <pagination-controls [(ngModel)]="p" class="my-3"></pagination-controls>
+    <button class="btn btn-secondary" [disabled]="currentPage === 1" (click)="prevPage()">Anterior</button>
+    
+    <span class="mx-2">Página {{ currentPage }} de {{ totalPages }}</span>
+
+    <button class="btn btn-secondary" [disabled]="currentPage === totalPages" (click)="nextPage()">Siguiente</button>
   </div>
+<br>
+  <button [routerLink]="['/agenda/create']" class="btn btn-success">Crear Nueva Cita</button>
 </div>

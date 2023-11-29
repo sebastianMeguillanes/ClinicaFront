@@ -8,7 +8,7 @@ import { DoctorService } from '../doctor.service';
 })
 export class ListComponent implements OnInit {
   currentPage: number = 1;
-  itemsPerPage: number = 5;
+  itemsPerPage: number = 10;
   pages: number[] = [];
   totalPages: number = 0;
   doctores: any[] = [];
