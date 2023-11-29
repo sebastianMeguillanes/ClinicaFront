@@ -1,4 +1,3 @@
-// src/app/shared/auth.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -21,6 +20,5 @@ export class AuthService {
   isLoggedIn(): boolean {
     return !!this.getToken();
   }
-  
-  // Otras funciones necesarias para la gestión de la autenticación
+
 }

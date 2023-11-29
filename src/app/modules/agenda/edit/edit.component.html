@@ -24,12 +24,10 @@
         <label for="descripcion">descripcion:</label>
         <input type="text" id="descripcion" name="descripcion" [(ngModel)]="agendaData[0].descripcion" class="form-control" required>
       </div>
+    </div>
 
-      <!-- <div class="form-group">
-        <label for="estado_agenda">Estado de Agenda:</label>
-        <input type="text" id="estado_agenda" name="estado_agenda" [(ngModel)]="agendaData[0].descripcion" class="form-control" required>
-      </div> -->
-
+    <!-- Columna derecha -->
+    <div class="col-md-6">
       <div class="form-group">
         <label for="id_doctor" class="form-label">Doctor:</label>
         <select id="id_doctor" name="id_doctor" [(ngModel)]="agendaData[0].id_doctor" class="form-select">
@@ -45,10 +43,8 @@
           <option value="Postergada">Postergada</option>
         </select>
       </div>
-
     </div>
 
-    
     <!-- Columna para botones -->
     <div class="col-md-12 mt-3">
       <button type="submit" class="btn btn-primary">Guardar Cambios</button>

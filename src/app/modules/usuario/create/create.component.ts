@@ -17,7 +17,7 @@ export class CreateComponent {
 
   
   onSubmit() {
-    // Llamar al servicio para crear un paciente con this.pacienteData
+
     this.usuarioService.createUsuario(this.usuarioData).subscribe((response: any) => {
       // Manejar la respuesta del servicio (por ejemplo, redireccionar o mostrar un mensaje)
       this.router.navigate(['/usuario/list']); // Redirigir a la lista de pacientes

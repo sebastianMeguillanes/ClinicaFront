@@ -4,9 +4,10 @@
     padding-top: 20px;
     background-color: #f0f0f0;
    
-    
   }
-  
+  .btn-primary {
+    margin-top: 12px;
+  }
   .custom-outline-danger {
     border-color: #ff0000; /* Rojo en formato hexadecimal */
   }
@@ -20,61 +21,3 @@
   outline: none; /* Añade esto para el estado de enfoque */
   }
   }
-
-  
-// #borde {
-//     //height: 200px;
-//     padding-top: 20px;
-//     background-color: #f0f0f0;
-   
-    
-//   }
-  
-//   .custom-outline-danger {
-//     border-color: #ff0000; /* Rojo en formato hexadecimal */
-//   }
-//   .custom-outline-dark {
-//     border-color: #87CEEB; /* Negro en formato hexadecimal */
-//   }
-//   .btn {
-  
-//   margin-right: 10px;
-//   &:focus {
-//   outline: none; /* Añade esto para el estado de enfoque */
-//   }
-//   }
-
-// // body {
-// //   font-family: 'Arial', sans-serif;
-// // }
-
-// // .container {
-// //   margin: 2%;
-
-// // }
-
-// // h2 {
-// //   color: #333;
-// // }
-
-// // .table {
-// //   width: 100%;
-// //   margin-top: 0%;
-// //   overflow-x: auto;
-
-// //   th, td {
-// //     padding: 0.8em; /* Reduzco el padding */
-// //     font-size: 0.8em; /* Reduzco el tamaño de la fuente */
-// //     height: 1.5em; /* Ajusto la altura de las filas */
-// //     text-align: center;
-// //     border: 1px solid #ddd;
-// //   }
-
-// //   th {
-// //     background-color: #f2f2f2;
-// //   }
-
-// //   tr:hover {
-// //     background-color: #f5f5f5;
-// //   }
-// // }

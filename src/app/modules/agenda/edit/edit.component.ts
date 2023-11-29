@@ -31,10 +31,7 @@ export class EditComponent implements OnInit {
     const agendaId = this.route.snapshot.params['id'];
   
     this.agendaService.getAgendaById(agendaId).subscribe((response: any) => {
-      //window.alert('Contenido de this.agendaData: \n' + JSON.stringify(response, null, 2));
       this.agendaData = response;
-      //window.alert('Contenido de this.agendaData: \n' + JSON.stringify(this.agendaData));
-     //window.alert( JSON.stringify(this.agendaData[0].nombre_paciente))
       
     });
     this.getDoctores();

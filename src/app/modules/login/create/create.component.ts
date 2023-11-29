@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
-import { AuthService } from '../../auth.service'; // Ajusta la ruta según tu estructura
+import { AuthService } from '../../auth.service'; 
 
 @Component({
   selector: 'app-create',

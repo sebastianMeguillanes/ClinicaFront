@@ -2,8 +2,6 @@
 <div >
   <h3>Agenda</h3>
   <div>
-    <!-- <input type="text" class="campo-busqueda" placeholder="Buscar...">
-    <div class="icono-lupa">&#128269;</div> -->
     <table class="table table-striped">
       <thead class="table-dark">
         <tr>
@@ -22,16 +20,7 @@
             <td>{{ agenda.descripcion }}</td>
             <td>{{ agenda.estado_agenda }}</td>
             <td>
-  <!--             
-              <style>
-                .custom-outline-danger {
-                  border-color: #ff0000; /* Rojo en formato hexadecimal */
-                }
-                .custom-outline-dark {
-                  border-color: #000000; /* Negro en formato hexadecimal */
-                }
-              </style> -->
-              
+
               <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-outline-info custom-outline-dark">
                 <i class="bi bi-info-lg"></i>
               </button>
@@ -39,11 +28,7 @@
               <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-outline-danger custom-outline-danger">
                 <i class="bi bi-trash3-fill"></i>
               </button>
-              
-                          
-              <!-- <a [routerLink]="['/agenda/edit', agenda.id_agenda]" class="btn btn-primary">Detalles</a> -->
-              <!-- <button [routerLink]="['/agenda/edit', agenda.id_agenda]" type="button" class="btn btn-danger">Danger</button>
-              <a [routerLink]="['/agenda/delete']" class="btn btn-danger">Eliminar</a> -->
+            
             </td>
           </tr>
         </ng-container>

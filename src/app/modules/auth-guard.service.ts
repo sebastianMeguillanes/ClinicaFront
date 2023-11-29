@@ -1,4 +1,3 @@
-// src/app/shared/auth-guard.service.ts
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AuthService } from './auth.service'; // Ajusta la ruta según tu estructura

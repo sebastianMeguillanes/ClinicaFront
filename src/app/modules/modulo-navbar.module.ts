@@ -1,4 +1,3 @@
-// modulo-navbar.module.ts
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 

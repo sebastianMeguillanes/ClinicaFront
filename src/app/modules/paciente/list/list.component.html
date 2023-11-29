@@ -27,11 +27,6 @@
           <td>{{ paciente.estado }}</td>
           
           <td>
-            <!-- <a [routerLink]="['/paciente/edit', paciente.id_paciente]" class="btn btn-primary">Detalles</a>
-            <a [routerLink]="['/paciente/delete', paciente.id_paciente]" class="btn btn-danger">Eliminar</a>
-             -->
-            <!-- <a [routerLink]="['../../histClinica/list', paciente.id_paciente]" class="btn btn-primary">Historial Clínico</a> -->
-
             <button [routerLink]="['../../histClinica/list', paciente.id_paciente]"  type="button" class="btn btn-primary">
               <i class="bi bi-card-text"></i>
             </button>

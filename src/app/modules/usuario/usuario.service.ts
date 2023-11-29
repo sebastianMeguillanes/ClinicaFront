@@ -25,7 +25,4 @@ export class UsuarioService {
     return this.http.put(`${this.apiUrl}${id}`, data);
   }
 
-//   deleteTratamiento(id: number) {
-//     return this.http.delete(`${this.apiUrl}${id}`);
-//   }
 }
