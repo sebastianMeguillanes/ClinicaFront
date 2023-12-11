@@ -10,5 +10,5 @@ RUN npm run build --configuration=production
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/ClinicaFront /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 6661
 CMD ["nginx", "-g", "daemon off;"]
